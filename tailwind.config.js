@@ -14,9 +14,18 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        imageScale: {
+          from: {
+            transform: "scale(0.8)",
+          },
+          to: {
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         headerMenuFadeIn: "headerMenuFadeIn 0.2s linear",
+        image: "imageScale 0.9s ease",
       },
     },
     screens: {
