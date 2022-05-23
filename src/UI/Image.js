@@ -2,7 +2,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 
-function Image({ to = "", alt = "", width = "300", height = "300", src }) {
+function Image({ to = "", alt = "", width = "200", height = "200", src }) {
   return (
     <Link to={to}>
       <LazyLoadImage

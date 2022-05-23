@@ -1,4 +1,4 @@
-import Image from "./Image";
+import Image from "../../UI/Image";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 
@@ -13,8 +13,6 @@ function MainCarousel(props) {
       infiniteLoop={true}
       showArrows={false}
       showStatus={false}
-      centerMode={document.body.scrollWidth < 600 ? true : false}
-      centerSlidePercentage={85}
     >
       {props.images.map((image, index) => (
         <div
@@ -27,8 +25,8 @@ function MainCarousel(props) {
             </h4>
             <Image src={image[0].url} to={image[0].to} />
             <div className="grid grid-cols-4 gap-1">
-              {image[0].subItems.map((item) => (
-                <Image src={item.url} to={item.to} />
+              {image[0].subItems.map((item, index) => (
+                <Image key={index} src={item.url} to={item.to} />
               ))}
             </div>
           </div>
@@ -38,8 +36,8 @@ function MainCarousel(props) {
             </h4>
             <Image src={image[1].url} to={image[1].to} />
             <div className="grid grid-cols-4 gap-1">
-              {image[1].subItems.map((item) => (
-                <Image src={item.url} to={item.to} />
+              {image[1].subItems.map((item, index) => (
+                <Image key={index} src={item.url} to={item.to} />
               ))}
             </div>
           </div>
