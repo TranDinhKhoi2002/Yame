@@ -1,4 +1,5 @@
 import { Fragment, useCallback, useState } from "react";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Backdrop from "./Backdrop";
 import Modal from "./Modal";
@@ -22,6 +23,7 @@ function Layout(props) {
         <Backdrop show={sideBarActive} hideSideBar={closeSideBarHandler} />
       )}
       <main>{props.children}</main>
+      <Footer />
     </Fragment>
   );
 }
