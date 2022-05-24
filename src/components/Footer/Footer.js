@@ -7,7 +7,7 @@ import {
 } from "../../data/address";
 import CollapseFooter from "./CollapseFooter";
 
-function Footer(props) {
+function Footer() {
   return (
     <div className="py-5 bg-[#111] text-[#e4e4e4]">
       <div className="container mx-auto px-4">
@@ -33,7 +33,7 @@ function Footer(props) {
             <div className="grid md:grid-cols-3 grid-cols-1 mt-6">
               <div className="">
                 <div>
-                  <h6 className="text-left text-base font-medium mb-4">
+                  <h6 className="text-left text-base font-medium mb-4 mt-3">
                     <FontAwesomeIcon icon={faMapLocation} /> TÂY NAM BỘ
                   </h6>
                   <div>
@@ -54,7 +54,7 @@ function Footer(props) {
               </div>
               <div className="">
                 <div>
-                  <h6 className="text-left text-base font-medium mb-4">
+                  <h6 className="text-left text-base font-medium mb-4 mt-3">
                     <FontAwesomeIcon icon={faMapLocation} /> ĐÔNG NAM BỘ VÀ TÂY
                     NGUYÊN
                   </h6>
@@ -76,7 +76,7 @@ function Footer(props) {
               </div>
               <div className="">
                 <div>
-                  <h6 className="text-left text-base font-medium mb-4">
+                  <h6 className="text-left text-base font-medium mb-4 mt-3">
                     <FontAwesomeIcon icon={faMapLocation} /> TP. HCM
                   </h6>
                   <div>
