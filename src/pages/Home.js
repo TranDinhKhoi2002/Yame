@@ -3,13 +3,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MainCarousel from "./Home/MainCarousel";
 import Image from "../UI/Image";
 import {
-  homeCarouselImages,
   homeHotProductsImages,
   homeTrousersImages,
   saleOffImages,
   socialImages,
 } from "../data/images";
-import { homeIntroImages } from "../data/images";
 import Intro from "./Home/Intro";
 import HotProducts from "./Home/HotProducts";
 import Social from "./Home/Social";
@@ -26,8 +24,8 @@ function Home() {
           src="https://cmsv2.yame.vn/uploads/861e4405-bc92-4ebf-8aa2-8ddf1bb90c52/Banner_sale_off_30_(03).jpg?quality=80&w=0&h=0"
         />
       </div>
-      <MainCarousel images={homeCarouselImages} />
-      <Intro images={homeIntroImages} />
+      <MainCarousel />
+      <Intro />
       <div className="text-center">
         <p className="text-2xl pt-5 pb-2">Top sản phẩm HOT</p>
         <p>Những sản phẩm thời trang mới nhất/Hot nhất</p>

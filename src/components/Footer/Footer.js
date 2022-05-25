@@ -97,7 +97,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="md:flex items-center px-[8%] mt-6">
+          <div className="md:flex items-center text-center md:text-left px-[8%] mt-6">
             <div className="md:w-[80%]">
               <p>© 2022 - CÔNG TY TNHH YAME VN</p>
               <p className="text-[9px]">
@@ -110,7 +110,7 @@ function Footer() {
                 hàng: (028) 7307 1441 - Email: cskh@yame.vn
               </p>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 flex justify-center">
               <a
                 href="http://online.gov.vn/Home/WebDetails/1840"
                 target="_blank"

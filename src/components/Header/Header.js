@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput";
 import MainNavigation from "./MainNavigation";
 import Actions from "./Actions";
 
-function Header() {
+function Header(props) {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
@@ -43,7 +43,7 @@ function Header() {
         </Link>
       </div>
       <MainNavigation />
-      <Actions openSearch={openSearchHandler} />
+      <Actions openSearch={openSearchHandler} showSideBar={props.showSideBar} />
     </header>
   );
 }
