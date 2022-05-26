@@ -1,10 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import { routes } from "./routes";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      {routes.map((route, index) => {
+        const Page = route.component;
+        return <Route key={index} path={route.path} element={<Page />} />;
+      })}
     </Routes>
   );
 }

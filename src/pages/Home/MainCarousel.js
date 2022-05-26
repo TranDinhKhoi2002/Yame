@@ -22,46 +22,43 @@ function MainCarousel() {
       swipeable={true}
       emulateTouch={true}
       autoPlay={true}
-      interval={5000}
+      interval={3000}
       infiniteLoop={true}
       showArrows={false}
       showStatus={false}
+      stopOnHover={false}
     >
-      {Object.keys(images).map((image, index) => (
+      {Object.keys(images).map((key, index) => (
         <div
           key={index}
           className="grid grid-cols-2 mx-[4px] gap-1 animate-image mt-8 xl:px-[3%]"
         >
           <div>
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
-              <Link to={images[image].item1.to}>
-                {images[image].item1.title}
-              </Link>
+              <Link to={images[key].item1.to}>{images[key].item1.title}</Link>
             </h4>
-            <Image src={images[image].item1.url} to={images[image].item1.to} />
+            <Image src={images[key].item1.url} to={images[key].item1.to} />
             <div className="grid grid-cols-4 gap-1">
-              {Object.keys(images[image].item1.subItems).map((item, index) => (
+              {Object.keys(images[key].item1.subItems).map((item, index) => (
                 <Image
                   key={index}
-                  src={images[image].item1.subItems[item].url}
-                  to={images[image].item1.subItems[item].to}
+                  src={images[key].item1.subItems[item].url}
+                  to={images[key].item1.subItems[item].to}
                 />
               ))}
             </div>
           </div>
           <div>
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
-              <Link to={images[image].item2.to}>
-                {images[image].item2.title}
-              </Link>
+              <Link to={images[key].item2.to}>{images[key].item2.title}</Link>
             </h4>
-            <Image src={images[image].item2.url} to={images[image].item2.to} />
+            <Image src={images[key].item2.url} to={images[key].item2.to} />
             <div className="grid grid-cols-4 gap-1">
-              {Object.keys(images[image].item2.subItems).map((item, index) => (
+              {Object.keys(images[key].item2.subItems).map((item, index) => (
                 <Image
                   key={index}
-                  src={images[image].item2.subItems[item].url}
-                  to={images[image].item2.subItems[item].to}
+                  src={images[key].item2.subItems[item].url}
+                  to={images[key].item2.subItems[item].to}
                 />
               ))}
             </div>

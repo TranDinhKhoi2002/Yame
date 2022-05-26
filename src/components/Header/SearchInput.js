@@ -2,13 +2,21 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SearchInput(props) {
+  const inputChangeHandler = (e) => {
+    const searchInputValue = e.target.value;
+
+    if (!searchInputValue.startsWith(" ")) {
+      props.setValue(searchInputValue);
+    }
+  };
+
   return (
     <header className={`${props.className} bg-white`}>
       <input
         className="w-[95%] border-none outline-none text-xl lg:text-[40px]"
         autoFocus
         value={props.value}
-        onChange={(e) => props.setValue(e.target.value)}
+        onChange={inputChangeHandler}
         placeholder="Nhập sản phẩm cần tìm"
       />
       <FontAwesomeIcon

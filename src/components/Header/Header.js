@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SearchInput from "./SearchInput";
 import MainNavigation from "./MainNavigation";
 import Actions from "./Actions";
+import routesConfig from "../../config/routes";
 
 function Header(props) {
   const [search, setSearch] = useState(false);
@@ -34,7 +35,7 @@ function Header(props) {
   return (
     <header className={headerClasses}>
       <div>
-        <Link to="/">
+        <Link to={routesConfig.home}>
           <img
             className="w-16 h-11 align-middle"
             src="https://res.yame.vn/Content/images/yame-f-logo-white.png"

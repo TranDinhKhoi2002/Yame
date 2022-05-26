@@ -1,38 +1,3 @@
-export const homeIntroImages = [
-  {
-    to: "poly-freshgear",
-    url: "https://cmsv2.yame.vn/uploads/be95d51a-5b11-4069-a19c-3f309000b9ea/thum_Poly_Freshgear.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "jean-cotton-spandex",
-    url: "https://cmsv2.yame.vn/uploads/80f24eae-5963-4d35-b7d4-99c42df887e9/thum_JEAN_COTTON_SPANDEX.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "cotton-compact",
-    url: "https://cmsv2.yame.vn/uploads/a08d7f11-9792-4d6c-a3f0-9cbba8d3b8f3/Thum_cotton.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "antimicrobial---vai-thun-khang-khuan",
-    url: "https://cmsv2.yame.vn/uploads/8f29f55a-201d-428e-b40e-f8706172224f/Anti_Thumb_VKK_(1280x1000).jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "cafe-fabric---soi-ca-phe-thien-nhien1",
-    url: "https://cmsv2.yame.vn/uploads/ae57bdcd-556a-433d-83ee-6744d8fad849/Banner_web_1280x1000.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "bamboo---soi-tre-khang-khuan-vuot-troi",
-    url: "https://cmsv2.yame.vn/uploads/f12045d4-ad31-4585-9c9e-50a558997a8c/Banner_web_BB_1280x1000.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "modal---soi-tu-bot-go-tu-nhien",
-    url: "https://cmsv2.yame.vn/uploads/fa5585eb-c0c9-40ba-af29-48203f70d88f/modal_Thum.jpg?quality=80&w=350&h=0",
-  },
-  {
-    to: "french-terry---cotton-100",
-    url: "https://cmsv2.yame.vn/uploads/b9c09c9c-3b70-4e42-acd1-12042bb310d7/0_French-Terry.jpg?quality=80&w=350&h=0",
-  },
-];
-
 export const homeHotProductsImages = [
   {
     to: "ao-thun/ao-thun-co-tron-y-nguyen-ban",
