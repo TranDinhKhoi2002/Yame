@@ -1,4 +1,4 @@
-import routesConfig from "../config/routes";
+import config from "../config";
 import FlashSale from "../pages/FlashSale";
 import Home from "../pages/Home";
 import ProductDetail from "../pages/ProductDetail";
@@ -9,12 +9,12 @@ import Signup from "../pages/Signup";
 import ProductsType from "../pages/ProductsType";
 
 export const routes = [
-  { path: routesConfig.home, component: Home },
-  { path: routesConfig.detail, component: ProductDetail },
-  { path: routesConfig.flashSale, component: FlashSale },
-  { path: routesConfig.openSale, component: OpenSale },
-  { path: routesConfig.quality, component: Quality },
-  { path: routesConfig.login, component: Login },
-  { path: routesConfig.signup, component: Signup },
-  { path: routesConfig.productsType, component: ProductsType },
+  { path: config.routes.home, component: Home },
+  { path: config.routes.detail, component: ProductDetail },
+  { path: config.routes.flashSale, component: FlashSale },
+  { path: config.routes.openSale, component: OpenSale },
+  { path: config.routes.quality, component: Quality },
+  { path: config.routes.login, component: Login },
+  { path: config.routes.signup, component: Signup },
+  { path: config.routes.productsType, component: ProductsType },
 ];

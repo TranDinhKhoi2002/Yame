@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Image from "../../UI/Image";
+import Image from "../../components/UI/Image";
 import * as request from "../../utils/request";
 
 function Intro() {

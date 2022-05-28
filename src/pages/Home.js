@@ -1,23 +1,26 @@
 import { Fragment } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import MainCarousel from "./Home/MainCarousel";
-import Image from "../UI/Image";
+import Intro from "./Home/Intro";
+import HotProducts from "./Home/HotProducts";
+import Social from "./Home/Social";
+
+import Image from "../components/UI/Image";
 import {
   homeHotProductsImages,
   homeTrousersImages,
   saleOffImages,
   socialImages,
 } from "../data/images";
-import Intro from "./Home/Intro";
-import HotProducts from "./Home/HotProducts";
-import Social from "./Home/Social";
+import config from "../config";
 
 function Home() {
   return (
     <Fragment>
       <div className="animate-image flex justify-center pt-[70px] lg:pt-[79px]">
         <Image
-          to="hang-mo-ban"
+          to={config.routes.flashSale}
           alt="MỞ BÁN"
           width="300"
           height="300"
@@ -36,10 +39,7 @@ function Home() {
       </div>
       <HotProducts images={homeTrousersImages} />
       <div className="flex justify-center">
-        <Image
-          src="https://cmsv2.yame.vn/uploads/fb6b0fb1-8c60-4908-ac7c-a8c653ae7f30/Banner_GU_new_.jpg?quality=80&w=0&h=0"
-          to="gioi-thieu-ve-yame"
-        />
+        <Image src="https://cmsv2.yame.vn/uploads/fb6b0fb1-8c60-4908-ac7c-a8c653ae7f30/Banner_GU_new_.jpg?quality=80&w=0&h=0" />
       </div>
       <div className="text-center">
         <p className="text-2xl pt-5 pb-2">Các sản phẩm giảm giá</p>

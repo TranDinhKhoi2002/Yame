@@ -1,4 +1,3 @@
-import Image from "../../UI/Image";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -21,8 +20,8 @@ function MainCarousel() {
       showThumbs={false}
       swipeable={true}
       emulateTouch={true}
-      autoPlay={true}
-      interval={3000}
+      // autoPlay={true}
+      // interval={3000}
       infiniteLoop={true}
       showArrows={false}
       showStatus={false}
@@ -37,14 +36,18 @@ function MainCarousel() {
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
               <Link to={images[key].item1.to}>{images[key].item1.title}</Link>
             </h4>
-            <Image src={images[key].item1.url} to={images[key].item1.to} />
+            <Link to={images[key].item1.to}>
+              <img alt="" src={images[key].item1.url} />
+            </Link>
             <div className="grid grid-cols-4 gap-1">
               {Object.keys(images[key].item1.subItems).map((item, index) => (
-                <Image
-                  key={index}
-                  src={images[key].item1.subItems[item].url}
-                  to={images[key].item1.subItems[item].to}
-                />
+                <Link to={images[key].item1.subItems[item].to}>
+                  <img
+                    key={index}
+                    src={images[key].item1.subItems[item].url}
+                    alt=""
+                  />
+                </Link>
               ))}
             </div>
           </div>
@@ -52,14 +55,18 @@ function MainCarousel() {
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
               <Link to={images[key].item2.to}>{images[key].item2.title}</Link>
             </h4>
-            <Image src={images[key].item2.url} to={images[key].item2.to} />
+            <Link to={images[key].item2.to}>
+              <img alt="" src={images[key].item2.url} />
+            </Link>
             <div className="grid grid-cols-4 gap-1">
               {Object.keys(images[key].item2.subItems).map((item, index) => (
-                <Image
-                  key={index}
-                  src={images[key].item2.subItems[item].url}
-                  to={images[key].item2.subItems[item].to}
-                />
+                <Link to={images[key].item2.subItems[item].to}>
+                  <img
+                    key={index}
+                    src={images[key].item2.subItems[item].url}
+                    alt=""
+                  />
+                </Link>
               ))}
             </div>
           </div>

@@ -1,6 +1,6 @@
 export const homeHotProductsImages = [
   {
-    to: "ao-thun/ao-thun-co-tron-y-nguyen-ban",
+    to: "shop/ao-thun-co-tron-y-nguyen-ban",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-y-nguyen-ban-18--ver39-0020883/09105e01-36e0-0100-3edd-0019150f7bf8.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-y-nguyen-ban-18--ver39-0020883/3f6747af-48e6-0200-93a6-0019150f7c55.jpg?w=540&h=756&c=true",
@@ -8,7 +8,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-be",
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-be",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/66d30e05-af45-6d00-ef44-00190b76cb41.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/5157715c-53b8-6e00-11a0-00190b76cc12.jpg?w=540&h=756&c=true",
@@ -16,7 +16,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-den",
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-den",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/f0e93712-260d-7a00-9d12-00190b77445b.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/8c8470dd-eecf-7b00-e281-00190b7744bb.jpg?w=540&h=756&c=true",
@@ -24,7 +24,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tron-don-gian-than-co-ai-horus-ver8",
+    to: "shop/ao-thun-co-tron-don-gian-than-co-ai-horus-ver8",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-than-co-ai-horus-ver8-0020796/87f7aa75-fe1a-0e00-34c9-001915106b43.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-than-co-ai-horus-ver8-0020796/cf7075d8-546a-0f00-0f6e-001915106c2e.jpg?w=540&h=756&c=true",
@@ -32,7 +32,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tron-toi-gian-m6",
+    to: "shop/ao-thun-co-tron-toi-gian-m6",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-m6-0020783/16528c04-1ab8-8700-4858-00190b777c9e.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-m6-0020783/2bff6ee5-50f0-8800-e48f-00190b777d5f.jpg?w=540&h=756&c=true",
@@ -40,7 +40,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tru-don-gian-y-nguyen-ban-ver46",
+    to: "shop/ao-thun-co-tru-don-gian-y-nguyen-ban-ver46",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tru-on-gian-y-nguyen-ban-ver46-0020781/6395b6a5-4ab2-2300-ea53-00190f910aaa.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tru-on-gian-y-nguyen-ban-ver46-0020781/cf8c25c0-6121-2400-a185-00190f910ad3.jpg?w=540&h=756&c=true",
@@ -48,7 +48,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-sweater-y-nguyen-ban-18",
+    to: "shop/ao-thun-sweater-y-nguyen-ban-18",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-sweater-y-nguyen-ban-18--ver47-0020780/11be65b4-82aa-1300-84c2-00190f905296.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-sweater-y-nguyen-ban-18--ver47-0020780/10edf8de-3dc6-1400-1662-00190f9052ad.jpg?w=540&h=756&c=true",
@@ -56,7 +56,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-thun-co-tron-toi-gian-ver12",
+    to: "shop/ao-thun-co-tron-toi-gian-ver12",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/8d37fdf7-e945-0200-a992-0019046480a2.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/1453a6bd-3792-0300-4dd3-001904648163.jpg?w=540&h=756&c=true",
@@ -64,7 +64,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-khoac-varsity-12vahdt-van-hien-chi-bang-ver4",
+    to: "shop/ao-khoac-varsity-12vahdt-van-hien-chi-bang-ver4",
     url: [
       "https://cdn2.yame.vn/pimg/ao-khoac-varsity-12vahdt-van-hien-chi-bang-ver4-0020554/41241376-2918-6400-e651-00191513135a.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-khoac-varsity-12vahdt-van-hien-chi-bang-ver4-0020554/ff9e2827-165f-6500-0090-00191513145c.jpg?w=540&h=756&c=true",
@@ -72,7 +72,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-khoac-hoodie-zipper-y-nguyen-ban-18--ver24",
+    to: "shop/ao-khoac-hoodie-zipper-y-nguyen-ban-18--ver24",
     url: [
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-y-nguyen-ban-18--ver24-0020718/12f9224e-3df6-8e00-d2b8-001915158d92.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-y-nguyen-ban-18--ver24-0020718/26bc5e6f-240b-8f00-c60d-001915158de7.jpg?w=540&h=756&c=true",
@@ -80,7 +80,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3",
+    to: "shop/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3",
     url: [
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/8c818724-bb21-6100-68ec-0018fa32ac79.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/433085ef-b75c-6200-1526-0018fa32ad39.jpg?w=540&h=756&c=true",
@@ -88,7 +88,7 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "ao-thun/ao-khoac-hoodie-ngan-ha-space-ver5",
+    to: "shop/ao-khoac-hoodie-ngan-ha-space-ver5",
     url: [
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-ngan-ha-space-ver5-0020570/17e12901-31e0-0100-9459-0018d2e7ba77.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-ngan-ha-space-ver5-0020570/76bdbc13-005f-0200-51ee-0018d2e7ba89.jpg?w=540&h=756&c=true",
@@ -99,7 +99,7 @@ export const homeHotProductsImages = [
 
 export const homeTrousersImages = [
   {
-    to: "quan/quan-jean-straight-on-gian-m1",
+    to: "shop/quan-jean-straight-on-gian-m1",
     url: [
       "https://cdn2.yame.vn/pimg/quan-jean-straight-on-gian-m1-0020025/71cb7568-ff5b-3700-0556-001883b5cec9.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/quan-jean-straight-on-gian-m1-0020025/3f97c31d-0111-3800-c75e-001883b5cf76.jpg?w=540&h=756&c=true",
@@ -107,7 +107,7 @@ export const homeTrousersImages = [
     price: 200,
   },
   {
-    to: "quan/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5",
+    to: "shop/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5",
     url: [
       "https://cdn2.yame.vn/pimg/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5-0020538/df272cc6-6f3b-2e00-23a9-0018ac6b3846.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5-0020538/e953fab7-0bcb-2f00-d1f1-0018ac6b38e5.jpg?w=540&h=756&c=true",
@@ -115,7 +115,7 @@ export const homeTrousersImages = [
     price: 200,
   },
   {
-    to: "quan/quan-tay-y2010-hg10",
+    to: "shop/quan-tay-y2010-hg10",
     url: [
       "https://cdn2.yame.vn/pimg/quan-tay-y2010-hg10-0019773/93df77d3-2771-2200-ee72-0018b9fac4c5.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/quan-tay-y2010-hg10-0019773/d6f1f14f-c76d-2300-871d-0018b9fac57b.jpg?w=540&h=756&c=true",
@@ -123,7 +123,7 @@ export const homeTrousersImages = [
     price: 200,
   },
   {
-    to: "quan/quan-jean-nam-y2010-dai-b19",
+    to: "shop/quan-jean-nam-y2010-dai-b19",
     url: [
       "https://cdn2.yame.vn/pimg/quan-jean-nam-y2010-dai-b19-0019174/66e37ca9-3d54-0400-65f2-0018f7d6f880.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/quan-jean-nam-y2010-dai-b19-0019174/3339b7c8-f73a-0500-1faa-0018f7d6f891.jpg?w=540&h=756&c=true",
