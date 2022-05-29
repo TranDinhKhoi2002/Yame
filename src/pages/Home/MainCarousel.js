@@ -41,12 +41,8 @@ function MainCarousel() {
             </Link>
             <div className="grid grid-cols-4 gap-1">
               {Object.keys(images[key].item1.subItems).map((item, index) => (
-                <Link to={images[key].item1.subItems[item].to}>
-                  <img
-                    key={index}
-                    src={images[key].item1.subItems[item].url}
-                    alt=""
-                  />
+                <Link to={images[key].item1.subItems[item].to} key={index}>
+                  <img src={images[key].item1.subItems[item].url} alt="" />
                 </Link>
               ))}
             </div>
@@ -60,12 +56,8 @@ function MainCarousel() {
             </Link>
             <div className="grid grid-cols-4 gap-1">
               {Object.keys(images[key].item2.subItems).map((item, index) => (
-                <Link to={images[key].item2.subItems[item].to}>
-                  <img
-                    key={index}
-                    src={images[key].item2.subItems[item].url}
-                    alt=""
-                  />
+                <Link to={images[key].item2.subItems[item].to} key={index}>
+                  <img src={images[key].item2.subItems[item].url} alt="" />
                 </Link>
               ))}
             </div>

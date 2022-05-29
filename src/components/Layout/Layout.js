@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useState } from "react";
+import { Fragment, useState } from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Backdrop from "./Backdrop";
@@ -7,13 +7,13 @@ import Modal from "./Modal";
 function Layout(props) {
   const [sideBarActive, setSideBarActive] = useState(false);
 
-  const openSideBarHandler = useCallback(() => {
+  const openSideBarHandler = () => {
     setSideBarActive(true);
-  }, []);
+  };
 
-  const closeSideBarHandler = useCallback(() => {
+  const closeSideBarHandler = () => {
     setSideBarActive(false);
-  }, []);
+  };
 
   return (
     <Fragment>

@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import SearchInput from "./SearchInput";
+import React from "react";
+
 import MainNavigation from "./MainNavigation";
 import Actions from "./Actions";
 import config from "../../config";
 
-function Header(props) {
+const Header = (props) => {
   const [search, setSearch] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
@@ -47,6 +49,6 @@ function Header(props) {
       <Actions openSearch={openSearchHandler} showSideBar={props.showSideBar} />
     </header>
   );
-}
+};
 
 export default Header;

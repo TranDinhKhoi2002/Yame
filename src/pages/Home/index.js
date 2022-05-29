@@ -1,19 +1,19 @@
 import { Fragment } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import MainCarousel from "./Home/MainCarousel";
-import Intro from "./Home/Intro";
-import HotProducts from "./Home/HotProducts";
-import Social from "./Home/Social";
+import MainCarousel from "./MainCarousel";
+import Intro from "./Intro";
+import HotProducts from "./HotProducts";
+import Social from "./Social";
 
-import Image from "../components/UI/Image";
+import Image from "../../components/UI/Image";
 import {
   homeHotProductsImages,
   homeTrousersImages,
   saleOffImages,
   socialImages,
-} from "../data/images";
-import config from "../config";
+} from "../../data/images";
+import config from "../../config";
 
 function Home() {
   return (
