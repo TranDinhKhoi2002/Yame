@@ -1,11 +1,9 @@
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import ProductInfor from "./ProductInfor";
 import * as request from "../../utils/request";
+import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 
 function ProductDetail(props) {
   const [product, setProduct] = useState({});
@@ -28,19 +26,9 @@ function ProductDetail(props) {
   }
 
   return (
-    <div className="mt-20 xl:px-[5%]">
-      <div className="flex items-center py-1 px-4 mb-2 bg-[#e9ecef]">
-        <FontAwesomeIcon
-          icon={faAngleLeft}
-          className="text-xl text-[#444444] hover:text-[#007bff] transition duration-300 cursor-pointer"
-        />
-        <span className="mx-2">/</span>
-        <strong className="overflow-hidden text-ellipsis whitespace-nowrap">
-          {product.name}
-        </strong>
-      </div>
+    <NavigationLayout title={product.name}>
       {!loading ? <ProductInfor product={product} /> : <p>Loading...</p>}
-    </div>
+    </NavigationLayout>
   );
 }
 

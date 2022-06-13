@@ -7,6 +7,7 @@ const routesConfig = {
   login: "/login",
   signup: "/signup",
   productsType: "/type/:name",
+  cart: "/cart",
 };
 
 export default routesConfig;

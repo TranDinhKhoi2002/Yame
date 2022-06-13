@@ -7,6 +7,7 @@ import Quality from "../pages/Quality";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import ProductsType from "../pages/ProductsType";
+import Cart from "../pages/Cart/index";
 
 export const routes = [
   { path: config.routes.home, component: Home },
@@ -17,4 +18,5 @@ export const routes = [
   { path: config.routes.login, component: Login },
   { path: config.routes.signup, component: Signup },
   { path: config.routes.productsType, component: ProductsType },
+  { path: config.routes.cart, component: Cart },
 ];
