@@ -23,6 +23,10 @@ function ProductDetail(props) {
     fetchProductInfo();
   }, [location.pathname]);
 
+  if (!product) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="mt-20 xl:px-[5%]">
       <div className="flex items-center py-1 px-4 mb-2 bg-[#e9ecef]">

@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import MainCarousel from "./MainCarousel";
 import Intro from "./Intro";
-import HotProducts from "./HotProducts";
+import Products from "../../components/Products/Products";
 import Social from "./Social";
 
 import Image from "../../components/UI/Image";
@@ -33,11 +33,11 @@ function Home() {
         <p className="text-2xl pt-5 pb-2">Top sản phẩm HOT</p>
         <p>Những sản phẩm thời trang mới nhất/Hot nhất</p>
       </div>
-      <HotProducts images={homeHotProductsImages} />
+      <Products images={homeHotProductsImages} />
       <div className="flex justify-center">
         <Image src="https://cmsv2.yame.vn/uploads/f88bec81-48d1-4518-bf7a-2990c8572f45/bannerbomber-1280x800_fix_ch%e1%bb%af.jpg?quality=80&w=0&h=0" />
       </div>
-      <HotProducts images={homeTrousersImages} />
+      <Products images={homeTrousersImages} />
       <div className="flex justify-center">
         <Image src="https://cmsv2.yame.vn/uploads/14c7e7a2-e21d-4d22-a03b-ee2e374dcf0b/Sale_off_13.06.jpg?quality=80&w=0&h=0" />
       </div>
@@ -45,7 +45,7 @@ function Home() {
         <p className="text-2xl pt-5 pb-2">Các sản phẩm giảm giá</p>
         <p>Đừng bỏ lỡ - Hãy mua ngay</p>
       </div>
-      <HotProducts images={saleOffImages} />
+      <Products images={saleOffImages} />
       <Social images={socialImages} />
     </Fragment>
   );
