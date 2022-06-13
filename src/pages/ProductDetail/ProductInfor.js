@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart";
+
 import ProductItem from "../../components/Products/ProductItem";
 import GeneralInfor from "./Generalnfor";
 import GuidanceSize from "./GuidanceSize";
@@ -5,6 +8,11 @@ import TableSize from "./TableSize";
 
 function ProductInfor(props) {
   const { product } = props;
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (size) => {
+    dispatch(cartActions.addToCart({ product, size }));
+  };
 
   return (
     <div className="md:grid grid-cols-3 gap-6 mt-3">
@@ -19,7 +27,7 @@ function ProductInfor(props) {
               id={product.id}
               price={product.price}
             />
-            <TableSize />
+            <TableSize onAddToCart={addToCartHandler} />
             <GuidanceSize />
           </div>
           <div className="mb-4">

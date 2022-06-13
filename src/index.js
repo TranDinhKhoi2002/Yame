@@ -7,14 +7,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Layout from "./components/Layout/Layout";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
   <BrowserRouter>
-    <Layout>
-      <App />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <App />
+      </Layout>
+    </Provider>
   </BrowserRouter>
   // </React.StrictMode>
 );

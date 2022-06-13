@@ -125,7 +125,9 @@ function GuidanceSize(props) {
           Tìm
         </button>
       </form>
-      <p className={`text-${message.color}-500 mt-2`}>{message.text}</p>
+      <p style={{ color: `${message.color}`, marginTop: "12px" }}>
+        {message.text}
+      </p>
     </div>
   );
 }

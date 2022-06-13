@@ -5,8 +5,11 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { useSelector } from "react-redux";
 
 function Actions(props) {
+  const products = useSelector((state) => state.cart.products);
+
   return (
     <div className="flex items-center">
       <button
@@ -24,7 +27,7 @@ function Actions(props) {
           icon={faBagShopping}
         />
         <span className="absolute top-[-11px] left-4 w-5 h-5 leading-5 rounded-full bg-[#ee4266] text-white text-[12px]">
-          2
+          {products.length}
         </span>
       </button>
       <button
