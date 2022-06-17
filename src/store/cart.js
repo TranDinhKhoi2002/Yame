@@ -16,10 +16,10 @@ const cartSlice = createSlice({
       );
 
       if (itemIndex === -1) {
-        const product = { ...action.payload, amout: 1 };
+        const product = { ...action.payload, amount: 1 };
         state.products.push(product);
       } else {
-        state.products[itemIndex].amout++;
+        state.products[itemIndex].amount++;
       }
 
       localStorage.removeItem("products");
