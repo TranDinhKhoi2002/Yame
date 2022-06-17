@@ -1,5 +1,5 @@
 import { Fragment, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 
 import images from "../../assets/images";
@@ -8,26 +8,55 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import classes from "./Cart.module.css";
+import { cartActions } from "../../store/cart";
 
 function Cart(props) {
   const products = useSelector((state) => state.cart.products);
   const amountInputRef = useRef();
+  const dispatch = useDispatch();
 
   let totalPrice = 0;
+
+  const removeFromCartHandler = (id, size) => {
+    dispatch(cartActions.removeFromCart({ id, size }));
+  };
 
   const updateAmountHandler = (e) => {
     e.preventDefault();
     console.log("clicked");
   };
 
+  const formatPrice = (price) => {
+    const tempPrice = [];
+    price
+      .split("")
+      .reverse()
+      .forEach((item, index) => {
+        tempPrice.push(item);
+        if (index % 3 === 2) {
+          tempPrice.push(",");
+        }
+      });
+
+    let formatedPrice = tempPrice.reverse().join("");
+
+    if (formatedPrice[0] === ",") {
+      formatedPrice = formatedPrice.slice(1);
+      return formatedPrice;
+    }
+
+    return formatedPrice;
+  };
+
   return (
     <NavigationLayout title="Thông tin giỏ hàng của bạn">
       {products.length === 0 ? (
-        <div className="text-center mt-6">
+        <div className="text-center my-6">
           <h3 className="text-2xl font-medium">Bạn chưa chọn sản phẩm.</h3>
           <div>
             <img className="mx-auto" src={images.noProduct} alt="" />
           </div>
+          <p>Hãy nhanh tay chọn ngay sản phẩm yêu thích.</p>
         </div>
       ) : (
         <div className={`${classes.cart} md:grid grid-cols-2 gap-5`}>
@@ -35,23 +64,31 @@ function Cart(props) {
             <h4>Chi tiết đơn hàng</h4>
             <table className="w-full text-[#111] mt-2">
               <tbody>
-                {products.map((cartProduct) => {
+                {products.map((cartProduct, index) => {
                   const formatedPrice = cartProduct.product.price.replace(
                     ",",
                     ""
                   );
 
-                  totalPrice += +formatedPrice;
+                  totalPrice += +formatedPrice * cartProduct.amount;
 
                   return (
-                    <Fragment key={cartProduct.product.id}>
+                    <Fragment key={index}>
                       <tr>
                         <td rowSpan={2} className="w-[100px]">
                           <img
                             src={cartProduct.product.images.mainImg}
                             alt=""
                           />
-                          <button className="flex items-center font-light hover:text-[#0056b3]">
+                          <button
+                            onClick={() =>
+                              removeFromCartHandler(
+                                cartProduct.product.id,
+                                cartProduct.size
+                              )
+                            }
+                            className="flex items-center font-light hover:text-[#0056b3]"
+                          >
                             <FontAwesomeIcon
                               icon={faTrash}
                               className="mr-2 w-3 h-3"
@@ -89,7 +126,13 @@ function Cart(props) {
                               </button>
                             </form>{" "}
                             = <span>đ </span>
-                            <b>{+cartProduct.amount * +formatedPrice}</b>
+                            <b>
+                              {formatPrice(
+                                (
+                                  +cartProduct.amount * +formatedPrice
+                                ).toString()
+                              )}
+                            </b>
                           </div>
                         </td>
                       </tr>
@@ -101,7 +144,7 @@ function Cart(props) {
                   <td>
                     <div>
                       <span>đ </span>
-                      <b>{totalPrice}</b>
+                      <b>{formatPrice(totalPrice.toString())}</b>
                     </div>
                   </td>
                 </tr>

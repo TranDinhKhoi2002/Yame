@@ -25,6 +25,16 @@ const cartSlice = createSlice({
       localStorage.removeItem("products");
       localStorage.setItem("products", JSON.stringify(state.products));
     },
+    removeFromCart(state, action) {
+      state.products = state.products.filter(
+        (item) =>
+          item.product.id === action.payload.id &&
+          item.size !== action.payload.size
+      );
+
+      localStorage.removeItem("products");
+      localStorage.setItem("products", JSON.stringify(state.products));
+    },
     assignAllProducts(state, action) {
       state.products = action.payload;
     },
