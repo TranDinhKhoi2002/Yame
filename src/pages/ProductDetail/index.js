@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import ProductInfor from "./ProductInfor";
 import * as request from "../../utils/request";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 
 function ProductDetail(props) {
   const [product, setProduct] = useState({});
@@ -22,13 +23,9 @@ function ProductDetail(props) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  if (!product) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <NavigationLayout title={product.name}>
-      {!loading ? <ProductInfor product={product} /> : <p>Loading...</p>}
+      {!loading ? <ProductInfor product={product} /> : <LoadingSpinner />}
     </NavigationLayout>
   );
 }
