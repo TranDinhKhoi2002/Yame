@@ -35,6 +35,26 @@ const cartSlice = createSlice({
       localStorage.removeItem("products");
       localStorage.setItem("products", JSON.stringify(state.products));
     },
+    updateAmountOfProduct(state, action) {
+      if (action.payload.amount === "0") {
+        state.products = state.products.filter(
+          (item) =>
+            item.product.id === action.payload.id &&
+            item.size !== action.payload.size
+        );
+      } else {
+        const itemIndex = state.products.findIndex(
+          (item) =>
+            item.product.id === action.payload.id &&
+            item.size === action.payload.size
+        );
+
+        state.products[itemIndex].amount = +action.payload.amount;
+      }
+
+      localStorage.removeItem("products");
+      localStorage.setItem("products", JSON.stringify(state.products));
+    },
     assignAllProducts(state, action) {
       state.products = action.payload;
     },

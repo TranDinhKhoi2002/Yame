@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 
@@ -12,8 +12,18 @@ import { cartActions } from "../../store/cart";
 
 function Cart(props) {
   const products = useSelector((state) => state.cart.products);
-  const amountInputRef = useRef();
   const dispatch = useDispatch();
+
+  const childRefs = React.useMemo(
+    () => products.map(() => React.createRef()),
+    [products]
+  );
+
+  useEffect(() => {
+    childRefs.forEach((ref, index) => {
+      ref.current.value = products[index].amount;
+    });
+  }, [childRefs, products]);
 
   let totalPrice = 0;
 
@@ -21,9 +31,14 @@ function Cart(props) {
     dispatch(cartActions.removeFromCart({ id, size }));
   };
 
-  const updateAmountHandler = (e) => {
-    e.preventDefault();
-    console.log("clicked");
+  const updateAmountHandler = (id, size, refIndex) => {
+    dispatch(
+      cartActions.updateAmountOfProduct({
+        id,
+        size,
+        amount: childRefs[refIndex].current.value,
+      })
+    );
   };
 
   const formatPrice = (price) => {
@@ -111,14 +126,23 @@ function Cart(props) {
                         <td>
                           <div>
                             <form
-                              onSubmit={updateAmountHandler}
+                              onSubmit={(e) => {
+                                e.preventDefault();
+
+                                updateAmountHandler(
+                                  cartProduct.product.id,
+                                  cartProduct.size,
+                                  index
+                                );
+                              }}
                               className="flex"
                             >
                               <input
                                 type="number"
+                                required
                                 min={0}
-                                ref={amountInputRef}
-                                defaultValue={cartProduct.amount}
+                                ref={childRefs[index]}
+                                defaultValue={childRefs[index].value}
                                 className="py-[0.5rem] px-3 text-base font-normal text-[#495057] border-[1px] border-solid border-[#ced4da] flex-1 rounded outline-none focus:border-[#ee4266]"
                               />
                               <button className="py-1 px-2 ml-2 text-[13px] leading-6 rounded-[0.2rem] text-[#343a40] border-[1px] border-solid border-[#343a40] hover:text-white hover:bg-[#343a40] hover:border-[#343a40]">
