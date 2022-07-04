@@ -19,9 +19,7 @@ function Layout(props) {
     <Fragment>
       <Header showSideBar={openSideBarHandler} />
       <Modal show={sideBarActive} hideSideBar={closeSideBarHandler} />
-      {sideBarActive && (
-        <Backdrop show={sideBarActive} hideSideBar={closeSideBarHandler} />
-      )}
+      <Backdrop show={sideBarActive} hide={closeSideBarHandler} />
       <main>{props.children}</main>
       <Footer />
     </Fragment>

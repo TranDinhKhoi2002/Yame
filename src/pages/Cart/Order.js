@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import * as request from "../../utils/request";
 
 import classes from "./Cart.module.css";
+import Backdrop from "../../components/Layout/Backdrop";
+import NotificationCart from "./NotificationCart";
 
 function Order() {
   const [homeShipChecked, setHomeShipChecked] = useState(true);
@@ -13,6 +15,7 @@ function Order() {
   const [phoneNumberValue, setPhoneNumberValue] = useState();
   const [addressValue, setAddressValue] = useState();
   const [noteValue, setNoteValue] = useState();
+  const [showNotification, setShowNotification] = useState(false);
 
   const navigate = useNavigate();
 
@@ -40,6 +43,11 @@ function Order() {
       note: noteValue.trim(),
     };
     await request.postOrder("orders", order);
+    setShowNotification(true);
+  };
+
+  const closeNotification = () => {
+    setShowNotification(false);
   };
 
   return (
@@ -49,11 +57,11 @@ function Order() {
         <div>
           <label htmlFor="customerName">Họ tên</label>
           <input
-            value={nameValue}
-            onChange={(e) => setNameValue(e.target.value)}
+            onBlur={(e) => setNameValue(e.target.value)}
             type="text"
             id="customerName"
             placeholder="Tên người nhận"
+            required
           />
           {(nameValue === "" ||
             (nameValue && nameValue.trim().length === 0)) && (
@@ -65,8 +73,7 @@ function Order() {
         <div>
           <label htmlFor="customerPhone">Điện thoại liên lạc</label>
           <input
-            value={phoneNumberValue}
-            onChange={(e) => setPhoneNumberValue(e.target.value)}
+            onBlur={(e) => setPhoneNumberValue(e.target.value)}
             type="number"
             id="customerPhone"
             placeholder="Số điện thoại"
@@ -116,8 +123,7 @@ function Order() {
           {homeShipChecked && (
             <Fragment>
               <input
-                value={addressValue}
-                onChange={(e) => setAddressValue(e.target.value)}
+                onBlur={(e) => setAddressValue(e.target.value)}
                 type="text"
                 placeholder="Địa chỉ nhận hàng"
               />
@@ -131,10 +137,7 @@ function Order() {
           )}
           {!homeShipChecked && (
             <Fragment>
-              <select
-                value={addressValue}
-                onChange={(e) => setAddressValue(e.target.value)}
-              >
+              <select onBlur={(e) => setAddressValue(e.target.value)}>
                 <option value="">Chọn cửa hàng nhận hàng</option>
                 <optgroup label="Tp. Hồ Chí Minh">
                   <option value="YaMe Q.10: 770F, Sư Vạn Hạnh (nd), P.12">
@@ -255,8 +258,7 @@ function Order() {
         <div>
           <label htmlFor="customerNote">Ghi chú</label>
           <textarea
-            value={noteValue}
-            onChange={(e) => setNoteValue(e.target.value)}
+            onBlur={(e) => setNoteValue(e.target.value)}
             className="!py-[0.375rem]"
             type="text"
             id="customerNote"
@@ -284,6 +286,8 @@ function Order() {
         </button>
       </form>
       <ToastContainer autoClose={3000} limit={1} pauseOnFocusLoss={false} />
+      <NotificationCart show={showNotification} />
+      <Backdrop show={showNotification} hide={closeNotification} />
     </div>
   );
 }

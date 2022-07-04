@@ -9,10 +9,7 @@ const Backdrop = React.memo((props) => {
   ];
 
   return (
-    <div
-      onClick={() => props.hideSideBar()}
-      className={cssClasses.join(" ")}
-    ></div>
+    <div onClick={() => props.hide()} className={cssClasses.join(" ")}></div>
   );
 });
 
