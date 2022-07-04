@@ -25,4 +25,19 @@ export const getProduct = async (path) => {
   }
 };
 
+export const postOrder = async (path, order, options = {}) => {
+  try {
+    const response = await request.post(`${path}.json`, order, options);
+
+    const data = await response.data;
+    if (!data) {
+      throw new Error("Failed to confirm your order");
+    }
+
+    return true;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export default request;

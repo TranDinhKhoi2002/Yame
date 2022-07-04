@@ -30,8 +30,8 @@ function CollapseMenu(props) {
         />
       </span>
       <ul {...getCollapseProps()} className="ml-10">
-        {props.children.map((item) => (
-          <li className="my-2">
+        {props.children.map((item, index) => (
+          <li key={index} className="my-2">
             <Link to={item.path}>{item.name}</Link>
           </li>
         ))}
