@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -8,6 +9,7 @@ import * as request from "../../utils/request";
 import classes from "./Cart.module.css";
 import Backdrop from "../../components/Layout/Backdrop";
 import NotificationCart from "./NotificationCart";
+import { cartActions } from "../../store/cart";
 
 function Order() {
   const [homeShipChecked, setHomeShipChecked] = useState(true);
@@ -17,6 +19,7 @@ function Order() {
   const [noteValue, setNoteValue] = useState();
   const [showNotification, setShowNotification] = useState(false);
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const backToHomeHandler = () => {
@@ -48,6 +51,7 @@ function Order() {
 
   const closeNotification = () => {
     setShowNotification(false);
+    dispatch(cartActions.clearCart());
   };
 
   return (
@@ -286,7 +290,7 @@ function Order() {
         </button>
       </form>
       <ToastContainer autoClose={3000} limit={1} pauseOnFocusLoss={false} />
-      <NotificationCart show={showNotification} />
+      <NotificationCart show={showNotification} hide={closeNotification} />
       <Backdrop show={showNotification} hide={closeNotification} />
     </div>
   );
