@@ -40,10 +40,10 @@ export const homeHotProductsImages = [
     price: 200,
   },
   {
-    to: "shop/ao-thun-co-tru-don-gian-y-nguyen-ban-ver46",
+    to: "shop/so-mi-co-danton-y-nguyen-ban-18-ver19",
     url: [
-      "https://cdn2.yame.vn/pimg/ao-thun-co-tru-on-gian-y-nguyen-ban-ver46-0020781/6395b6a5-4ab2-2300-ea53-00190f910aaa.jpg?w=540&h=756&c=true",
-      "https://cdn2.yame.vn/pimg/ao-thun-co-tru-on-gian-y-nguyen-ban-ver46-0020781/cf8c25c0-6121-2400-a185-00190f910ad3.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/so-mi-co-danton-y-nguyen-ban-18--ver19-0020713/4001fbdb-3399-0100-ed99-00190f6e1457.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/so-mi-co-danton-y-nguyen-ban-18--ver19-0020713/64d04885-8b54-0200-bd10-00190f6e15d9.jpg?w=540&h=756",
     ],
     price: 200,
   },
@@ -195,5 +195,56 @@ export const socialImages = [
   {
     to: "https://www.instagram.com/p/CbzokXhr7cW/",
     url: "https://cdn3.yame.vn/rimg?s=https%3a%2f%2finstagram.fsgn5-4.fna.fbcdn.net%2fv%2ft51.2885-15%2f277601919_3148607775458342_1260078678347702529_n.jpg%3fstp%3ddst-jpg_e35_s320x320%26_nc_ht%3dinstagram.fsgn5-4.fna.fbcdn.net%26_nc_cat%3d102%26_nc_ohc%3dp2B0WIm2jhsAX-hCQ2V%26tn%3dFVzqPsrHwX0V74Aq%26edm%3dAPU89FABAAAA%26ccb%3d7-4%26oh%3d00_AT_UYcRhE8cb5mxPKID41aeb2wccauuAGfIEeXeUuM7Mrg%26oe%3d624CF778%26_nc_sid%3d86f79a",
+  },
+];
+
+export const simpleTShirt = [
+  {
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-be",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/66d30e05-af45-6d00-ef44-00190b76cb41.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/5157715c-53b8-6e00-11a0-00190b76cc12.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-den",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/f0e93712-260d-7a00-9d12-00190b77445b.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/8c8470dd-eecf-7b00-e281-00190b7744bb.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-don-gian-than-co-ai-horus-ver8",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-than-co-ai-horus-ver8-0020796/87f7aa75-fe1a-0e00-34c9-001915106b43.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-than-co-ai-horus-ver8-0020796/cf7075d8-546a-0f00-0f6e-001915106c2e.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-toi-gian-m6",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-m6-0020783/16528c04-1ab8-8700-4858-00190b777c9e.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-m6-0020783/2bff6ee5-50f0-8800-e48f-00190b777d5f.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-toi-gian-ver12",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/8d37fdf7-e945-0200-a992-0019046480a2.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/1453a6bd-3792-0300-4dd3-001904648163.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/8c818724-bb21-6100-68ec-0018fa32ac79.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/433085ef-b75c-6200-1526-0018fa32ad39.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
   },
 ];

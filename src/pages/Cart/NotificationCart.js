@@ -30,13 +30,13 @@ function NotificationCart(props) {
         <div className="sm:flex justify-center sm:mt-5 gap-2">
           <button
             onClick={backToHome}
-            className="sm:w-[200px] block sm:inline-block m-auto sm:m-0 sm:bg-primary px-4 py-2 text-primary font-medium sm:font-normal sm:text-white rounded"
+            className="sm:w-[200px] block sm:inline-block m-auto sm:m-0 sm:bg-primary sm:hover:bg-[#d0284b] px-4 py-2 text-primary font-medium sm:font-normal sm:text-white rounded"
           >
             Tiếp tục mua sắm
           </button>
           <button
             onClick={closeHandler}
-            className="sm:w-[200px] block sm:inline-block m-auto sm:m-0 sm:bg-primary px-4 py-2 text-primary font-medium sm:font-normal sm:text-white rounded"
+            className="sm:w-[200px] block sm:inline-block m-auto sm:m-0 sm:bg-primary sm:hover:bg-[#d0284b] px-4 py-2 text-primary font-medium sm:font-normal sm:text-white rounded"
           >
             Đóng
           </button>

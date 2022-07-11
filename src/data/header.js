@@ -19,9 +19,9 @@ export const NAV_ITEMS = [
     to: "/type/gu-thiet-ke",
     hasChildren: true,
     items: [
-      { name: "Áo thun đơn giản", path: "/type/ao-thun-don-gian" },
-      { name: "Áo thun đơn giản 2", path: "/type/ao-thun-don-gian-2" },
-      { name: "Áo sơ mi đơn giản", path: "/type/ao-so-mi-don-gian" },
+      { name: "GU 12 Vị Anh Hùng Dân Tộc", path: "/type/12-anh-hung-dan-toc" },
+      { name: "GU Thần Cổ Đại", path: "/type/than-co-dai" },
+      { name: "GU Ngân Hà", path: "/type/ngan-ha" },
     ],
   },
   {
@@ -29,9 +29,8 @@ export const NAV_ITEMS = [
     to: "/type/gu-unisex",
     hasChildren: true,
     items: [
-      { name: "Áo thun đơn giản", path: "/type/ao-thun-don-gian" },
-      { name: "Áo thun đơn giản 2", path: "/type/ao-thun-don-gian-2" },
-      { name: "Áo sơ mi đơn giản", path: "/type/ao-so-mi-don-gian" },
+      { name: "GU Linh vật", path: "/type/linh-vat" },
+      { name: "GU Y Nguyên Bản 18-", path: "/type/y-nguyen-ban-18-" },
     ],
   },
 ];
