@@ -11,6 +11,8 @@ import Backdrop from "../../components/Layout/Backdrop";
 import NotificationCart from "./NotificationCart";
 import { cartActions } from "../../store/cart";
 
+import config from "../../config";
+
 function Order() {
   const [homeShipChecked, setHomeShipChecked] = useState(true);
   const [nameValue, setNameValue] = useState();
@@ -23,7 +25,7 @@ function Order() {
   const navigate = useNavigate();
 
   const backToHomeHandler = () => {
-    navigate("/");
+    navigate(config.routes.home);
   };
 
   const confirmOrderHandler = async (e) => {

@@ -15,6 +15,7 @@ function MainNavigation() {
                 <Link
                   className="transition duration-300 text-[#f3f3f4] hover:text-primary"
                   to={item.to}
+                  state={{ title: item.title, products: item.generalProducts }}
                 >
                   {item.title}
                   {item.hasChildren && (
@@ -29,6 +30,7 @@ function MainNavigation() {
               <Link
                 className="transition duration-300 text-[#f3f3f4] hover:text-primary"
                 to={item.to}
+                state={{ title: item.title, products: item.generalProducts }}
               >
                 {item.title}
                 {item.hasChildren && (

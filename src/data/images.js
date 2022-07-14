@@ -248,3 +248,70 @@ export const simpleTShirt = [
     price: 200,
   },
 ];
+
+export const simpleTShirt2 = [
+  {
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-be",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/66d30e05-af45-6d00-ef44-00190b76cb41.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020808/5157715c-53b8-6e00-11a0-00190b76cc12.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/8c818724-bb21-6100-68ec-0018fa32ac79.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-khoac-hoodie-zipper-on-gian-than-co-ai-valknut-ver3-0020680/433085ef-b75c-6200-1526-0018fa32ad39.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-don-gian-y-nguyen-ban-ver52-den",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/f0e93712-260d-7a00-9d12-00190b77445b.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver52-0020809/8c8470dd-eecf-7b00-e281-00190b7744bb.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+  {
+    to: "shop/ao-thun-co-tron-toi-gian-ver12",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/8d37fdf7-e945-0200-a992-0019046480a2.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-toi-gian-ver12-0020772/1453a6bd-3792-0300-4dd3-001904648163.jpg?w=540&h=756&c=true",
+    ],
+    price: 200,
+  },
+];
+
+export const simpleShirt = [
+  {
+    to: "shop/so-mi-co-danton-y-nguyen-ban-18-ver19",
+    url: [
+      "https://cdn2.yame.vn/pimg/so-mi-co-danton-y-nguyen-ban-18--ver19-0020713/4001fbdb-3399-0100-ed99-00190f6e1457.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/so-mi-co-danton-y-nguyen-ban-18--ver19-0020713/64d04885-8b54-0200-bd10-00190f6e15d9.jpg?w=540&h=756",
+    ],
+    price: 200,
+  },
+];
+
+const products = homeHotProductsImages.concat(
+  homeTrousersImages,
+  saleOffImages
+);
+
+const getProductsFromTypes = (arr, query) => {
+  products.forEach((product) => {
+    if (product.to.includes(query)) {
+      arr.push(product);
+    }
+  });
+};
+
+const simpleProducts = [];
+getProductsFromTypes(simpleProducts, "on-gian");
+
+const simplifyProducts = [];
+getProductsFromTypes(simplifyProducts, "toi-gian");
+
+export { simpleProducts, simplifyProducts };

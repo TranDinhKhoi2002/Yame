@@ -28,6 +28,7 @@ function Menu({ items = [], children, detail = false }) {
                     <Link
                       className="hover:text-primary transition duration-300"
                       to={item.to}
+                      state={{ title: item.title }}
                     >
                       {item.title}
                     </Link>
@@ -37,7 +38,9 @@ function Menu({ items = [], children, detail = false }) {
                           className="hover:text-primary transition duration-300"
                           key={index}
                         >
-                          <Link to={child.path}>{child.name}</Link>
+                          <Link to={child.path} state={{ title: child.name }}>
+                            {child.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -46,7 +49,12 @@ function Menu({ items = [], children, detail = false }) {
               </div>
             ) : (
               items.map((item, index) => (
-                <MenuItem key={index} title={item.name} path={item.path} />
+                <MenuItem
+                  key={index}
+                  title={item.name}
+                  path={item.path}
+                  products={item.products}
+                />
               ))
             )}
           </PopperWrapper>

@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import images from "../../assets/images";
+import config from "../../config";
 import { cartActions } from "../../store/cart";
 
 function NotificationCart(props) {
@@ -9,7 +10,7 @@ function NotificationCart(props) {
 
   const backToHome = () => {
     dispatch(cartActions.clearCart());
-    navigate("/");
+    navigate(config.routes.home);
   };
 
   const closeHandler = () => {

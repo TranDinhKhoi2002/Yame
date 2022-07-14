@@ -40,4 +40,19 @@ export const postOrder = async (path, order, options = {}) => {
   }
 };
 
+export const checkValidUser = async (userName, password) => {
+  try {
+    const response = await request.get("users.json");
+
+    const data = await response.data;
+    if (data) {
+      return true;
+    }
+
+    return false;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export default request;

@@ -38,7 +38,7 @@ function Home() {
         <Image src="https://cmsv2.yame.vn/uploads/f88bec81-48d1-4518-bf7a-2990c8572f45/bannerbomber-1280x800_fix_ch%e1%bb%af.jpg?quality=80&w=0&h=0" />
       </div>
       <Products images={homeTrousersImages} />
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-3">
         <Image src="https://cmsv2.yame.vn/uploads/14c7e7a2-e21d-4d22-a03b-ee2e374dcf0b/Sale_off_13.06.jpg?quality=80&w=0&h=0" />
       </div>
       <div className="text-center">

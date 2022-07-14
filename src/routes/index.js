@@ -4,10 +4,10 @@ import Home from "../pages/Home/index";
 import ProductDetail from "../pages/ProductDetail/index";
 import OpenSale from "../pages/OpenSale";
 import Quality from "../pages/Quality";
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
 import ProductsType from "../pages/ProductsType";
 import Cart from "../pages/Cart/index";
+import Login from "../pages/Auth/Login";
+import Signup from "../pages/Auth/Signup";
 
 export const routes = [
   { path: config.routes.home, component: Home },

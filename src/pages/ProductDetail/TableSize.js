@@ -37,7 +37,7 @@ function TableSize(props) {
     <Fragment>
       <table className="w-full mb-4 text-[#212529] mt-6">
         <tbody>
-          <tr className="border-y-[1px] h-[35px]">
+          <tr className="border-y-[1px] border-[#dad1d1] h-[35px]">
             <td>Đen, S</td>
             <td className="text-right ">
               Còn <strong>35</strong> sản phẩm
@@ -49,7 +49,7 @@ function TableSize(props) {
               </button>
             </td>
           </tr>
-          <tr className="border-y-[1px] h-[35px]">
+          <tr className="border-y-[1px] border-[#dad1d1] h-[35px]">
             <td>Đen, M</td>
             <td className="text-right ">
               Còn <strong>35</strong> sản phẩm
@@ -61,7 +61,7 @@ function TableSize(props) {
               </button>
             </td>
           </tr>
-          <tr className="border-y-[1px] h-[35px]">
+          <tr className="border-y-[1px] border-[#dad1d1] h-[35px]">
             <td>Đen, L</td>
             <td className="text-right ">
               Còn <strong>35</strong> sản phẩm
@@ -73,7 +73,7 @@ function TableSize(props) {
               </button>
             </td>
           </tr>
-          <tr className="border-y-[1px] h-[35px]">
+          <tr className="border-y-[1px] border-[#dad1d1] h-[35px]">
             <td>Đen, XL</td>
             <td className="text-right ">
               Còn <strong>35</strong> sản phẩm

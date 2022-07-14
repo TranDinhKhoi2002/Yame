@@ -1,18 +1,40 @@
+import {
+  simpleProducts,
+  simpleShirt,
+  simpleTShirt,
+  simpleTShirt2,
+  simplifyProducts,
+} from "./images";
+
 export const NAV_ITEMS = [
   {
     title: "GU TỐI GIẢN",
     to: "/type/gu-toi-gian",
     hasChildren: false,
+    generalProducts: simplifyProducts,
   },
   {
     title: "GU ĐƠN GIẢN",
     to: "/type/gu-don-gian",
     hasChildren: true,
     items: [
-      { name: "Áo thun đơn giản", path: "/type/ao-thun-don-gian" },
-      { name: "Áo thun đơn giản 2", path: "/type/ao-thun-don-gian-2" },
-      { name: "Áo sơ mi đơn giản", path: "/type/ao-so-mi-don-gian" },
+      {
+        name: "Áo thun đơn giản",
+        path: "/type/ao-thun-don-gian",
+        products: simpleTShirt,
+      },
+      {
+        name: "Áo thun đơn giản 2",
+        path: "/type/ao-thun-don-gian-2",
+        products: simpleTShirt2,
+      },
+      {
+        name: "Áo sơ mi đơn giản",
+        path: "/type/ao-so-mi-don-gian",
+        products: simpleShirt,
+      },
     ],
+    generalProducts: simpleProducts,
   },
   {
     title: "GU THIẾT KẾ",

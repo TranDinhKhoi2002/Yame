@@ -16,7 +16,7 @@ function NavigationLayout(props) {
         <button onClick={backHandler}>
           <FontAwesomeIcon
             icon={faAngleLeft}
-            className="text-xl text-[#444444] hover:text-[#007bff] transition duration-300 cursor-pointer"
+            className="text-xl text-[#444444] hover:text-blue transition duration-300 cursor-pointer"
           />
         </button>
         <span className="mx-2">/</span>

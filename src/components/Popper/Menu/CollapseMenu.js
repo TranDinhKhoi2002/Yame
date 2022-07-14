@@ -14,6 +14,7 @@ function CollapseMenu(props) {
     <div className="relative">
       <Link
         to={props.to}
+        state={{ title: props.title, products: props.products }}
         className="text-xl px-5 py-[5px] hover:text-primary transition duration-300"
       >
         {props.title}
@@ -32,7 +33,9 @@ function CollapseMenu(props) {
       <ul {...getCollapseProps()} className="ml-10">
         {props.children.map((item, index) => (
           <li key={index} className="my-2">
-            <Link to={item.path}>{item.name}</Link>
+            <Link to={item.path} state={{ title: item.name }}>
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>

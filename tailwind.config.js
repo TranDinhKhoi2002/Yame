@@ -4,6 +4,12 @@ module.exports = {
     extend: {
       colors: {
         primary: "#ee4266",
+        blue: "#007bff",
+        darkBlue100: "#0069d9",
+        darkBlue200: "#0062cc",
+        gray: "#6c757d",
+        darkGray100: "#5a6268",
+        darkGray200: "#545b62",
       },
       keyframes: {
         headerMenuFadeIn: {

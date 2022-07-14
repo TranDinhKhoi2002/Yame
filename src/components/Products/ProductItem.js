@@ -29,7 +29,7 @@ function ProductItem(props) {
         />
       </div>
       {!props.forDetail && (
-        <div className="absolute inline-block top-[95%] sm:top-[97.3%] text-[12px] font-normal ml-1">
+        <div className="absolute inline-block top-[95%] sm:top-[97.3%] text-[11px] font-normal ml-1">
           {props.image.oldPrice && props.image.discountPrice ? (
             <Fragment>
               <span className="line-through">{props.image.oldPrice}</span>

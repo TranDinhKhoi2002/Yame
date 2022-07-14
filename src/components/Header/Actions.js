@@ -7,13 +7,18 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import config from "../../config";
 
 function Actions(props) {
   const products = useSelector((state) => state.cart.products);
   const navigate = useNavigate();
 
   const previewCartHandler = () => {
-    navigate("/cart");
+    navigate(config.routes.cart);
+  };
+
+  const authHandler = () => {
+    navigate(config.routes.login);
   };
 
   return (
@@ -24,7 +29,10 @@ function Actions(props) {
       >
         <FontAwesomeIcon className="ml-[6px] text-[16px]" icon={faSearch} />
       </button>
-      <button className="w-4 h-4 leading-4 bg-transparent text-[#868995] cursor-pointer mx-3 transition duration-300 ease-linear hover:text-[#3d3f45]">
+      <button
+        onClick={authHandler}
+        className="w-4 h-4 leading-4 bg-transparent text-[#868995] cursor-pointer mx-3 transition duration-300 ease-linear hover:text-[#3d3f45]"
+      >
         <FontAwesomeIcon className="ml-[6px] text-[16px]" icon={faUser} />
       </button>
       <button

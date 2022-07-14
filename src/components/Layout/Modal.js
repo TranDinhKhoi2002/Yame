@@ -46,10 +46,15 @@ const Modal = (props) => {
                     to={item.to}
                     title={item.title}
                     children={item.items}
+                    products={item.generalProducts}
                   />
                 ) : (
                   <Link
                     to={item.to}
+                    state={{
+                      title: item.title,
+                      products: item.generalProducts,
+                    }}
                     className="text-xl px-5 py-[5px] hover:text-primary transition duration-300"
                   >
                     {item.title}
