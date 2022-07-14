@@ -1,3 +1,4 @@
+import { hashSync } from "bcryptjs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -5,15 +6,17 @@ import { ToastContainer, toast } from "react-toastify";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
 import { checkValidEmail } from "../../utils/email";
+import * as request from "../../utils/request";
 
 function Signup() {
   const [userNameValue, setUserNameValue] = useState();
   const [passwordValue, setPasswordValue] = useState();
   const [confirmPasswordValue, setConfirmPasswordValue] = useState();
   const [displayNameValue, setDisplayNameValue] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const signupHandler = (e) => {
+  const signupHandler = async (e) => {
     e.preventDefault();
 
     let message;
@@ -54,7 +57,37 @@ function Signup() {
       return;
     }
 
-    alert("Dang ki thanh cong");
+    const newUser = {
+      userName: userNameValue,
+      hashedPassword: hashSync(passwordValue),
+      displayName: displayNameValue,
+    };
+
+    try {
+      setIsLoading(true);
+      const data = await request.postUser(newUser);
+      if (data.message) {
+        throw new Error("Số điện thoại hoặc Email này đã tồn tại");
+      } else if (data) {
+        toast.success(
+          <ToastifyMessage
+            title="Đăng ký"
+            message="Đăng ký tài khoản thành công"
+          />
+        );
+        setIsLoading(false);
+
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
+      } else {
+        throw new Error("Đăng ký không thành công, vui lòng thử lại");
+      }
+    } catch (err) {
+      console.log(err.message);
+      setIsLoading(false);
+      toast.error(<ToastifyMessage title="Đăng ký" message={err.message} />);
+    }
   };
 
   const loginHandler = (e) => {
@@ -82,10 +115,15 @@ function Signup() {
 
   return (
     <NavigationLayout title="Đăng ký">
-      <div className="w-[90%] md:w-[55%] mx-auto">
+      <div className="w-[90%] md:w-[55%] mx-auto my-12">
         <h3 className="text-[1.75rem] font-medium leading-[1.2] mb-6 text-center">
           Đăng ký tài khoản
         </h3>
+        {isLoading && (
+          <p className="text-center text-[#308f69] font-normal">
+            Đang thực thi...
+          </p>
+        )}
         <form>
           {elements.map(([id, label, value, setValue, type], index) => (
             <div key={index} className="grid grid-cols-3 mt-5">
@@ -156,7 +194,8 @@ function Signup() {
             <div className="col-span-2 text-left">
               <button
                 onClick={signupHandler}
-                className="h-[43px] text-[13px] font-normal text-white py-[0.375rem] px-3 uppercase transition duration-300 ease-in-out bg-blue rounded-[0.25rem] leading-normal border-[1px] border-solid border-blue hover:bg-darkBlue100 hover:border-darkBlue200"
+                disabled={isLoading}
+                className="h-[43px] text-[13px] font-normal text-white py-[0.375rem] px-3 uppercase transition duration-300 ease-in-out bg-blue disabled:bg-slate-400 disabled:border-slate-400 rounded-[0.25rem] leading-normal border-[1px] border-solid border-blue hover:bg-darkBlue100 hover:border-darkBlue200"
               >
                 Tạo tài khoản
               </button>

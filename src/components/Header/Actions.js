@@ -12,13 +12,18 @@ import config from "../../config";
 function Actions(props) {
   const products = useSelector((state) => state.cart.products);
   const navigate = useNavigate();
+  const isLoggedin = useSelector((state) => state.auth.isAuth);
 
   const previewCartHandler = () => {
     navigate(config.routes.cart);
   };
 
   const authHandler = () => {
-    navigate(config.routes.login);
+    if (isLoggedin) {
+      navigate(config.routes.account);
+    } else {
+      navigate(config.routes.login);
+    }
   };
 
   return (

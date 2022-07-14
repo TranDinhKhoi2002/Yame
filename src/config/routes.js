@@ -6,6 +6,7 @@ const routesConfig = {
   quality: "/quality/:name",
   login: "/login",
   signup: "/signup",
+  account: "/account",
   productsType: "/type/:name",
   cart: "/cart",
 };

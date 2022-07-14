@@ -1,4 +1,5 @@
 import axios from "axios";
+import { compareSync } from "bcryptjs";
 
 const request = axios.create({
   baseURL: "https://yame-bff35-default-rtdb.firebaseio.com/",
@@ -36,23 +37,41 @@ export const postOrder = async (path, order, options = {}) => {
 
     return true;
   } catch (err) {
-    console.log(err.message);
+    console.log(err.message || "Failed");
+  }
+};
+
+export const getExistingUser = async (userName) => {
+  const response = await request.get("users.json");
+  const data = await response.data;
+  const key = Object.keys(data).find((key) => data[key].userName === userName);
+
+  if (key) {
+    return data[key];
+  }
+  return null;
+};
+
+export const postUser = async (newUser) => {
+  const isExistingUser = await getExistingUser(newUser.userName);
+  if (!isExistingUser) {
+    const response = await request.post("users.json", newUser);
+
+    const data = await response.data;
+    return data;
+  } else {
+    return { message: "user already exists" };
   }
 };
 
 export const checkValidUser = async (userName, password) => {
-  try {
-    const response = await request.get("users.json");
-
-    const data = await response.data;
-    if (data) {
-      return true;
-    }
-
-    return false;
-  } catch (err) {
-    console.log(err.message);
+  const existingUser = await getExistingUser(userName);
+  if (existingUser) {
+    const isValidPassword = compareSync(password, existingUser.hashedPassword);
+    return isValidPassword;
   }
+
+  return false;
 };
 
 export default request;
