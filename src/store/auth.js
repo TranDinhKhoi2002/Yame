@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialAuthState = {
-  isAuth: localStorage.getItem("userName") ? true : false,
+  isAuth: localStorage.getItem("user") ? true : false,
 };
 
 const authSlice = createSlice({
@@ -20,6 +20,7 @@ const authSlice = createSlice({
     },
     logout(state) {
       state.isAuth = false;
+      localStorage.removeItem("user");
     },
   },
 });

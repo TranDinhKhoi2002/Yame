@@ -5,7 +5,10 @@ import { ToastContainer, toast } from "react-toastify";
 
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
-import { checkValidEmail } from "../../utils/email";
+import {
+  checkValidEmail,
+  checkValidVietNamPhoneNumber,
+} from "../../utils/validate";
 import * as request from "../../utils/request";
 
 function Signup() {
@@ -30,7 +33,7 @@ function Signup() {
     } else if (
       userNameValue &&
       !isNaN(userNameValue) &&
-      !checkValidPhoneNumber(userNameValue)
+      !checkValidVietNamPhoneNumber(userNameValue)
     ) {
       message = "Số điện thoại không hợp lệ";
     } else if (
@@ -95,11 +98,6 @@ function Signup() {
     navigate("/login");
   };
 
-  const checkValidPhoneNumber = (phoneNumber) => {
-    const regex = /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/;
-    return regex.test(phoneNumber);
-  };
-
   const elements = [
     ["name", "Họ tên", displayNameValue, setDisplayNameValue, "text"],
     ["userName", "Điện thoại / Email", userNameValue, setUserNameValue, "text"],
@@ -144,28 +142,28 @@ function Signup() {
                   </label>
                 )}
                 {value &&
-                  value === userNameValue &&
+                  id === "userName" &&
                   !isNaN(value) &&
-                  !checkValidPhoneNumber(value) && (
+                  !checkValidVietNamPhoneNumber(value) && (
                     <label className="text-primary">
                       Số điện thoại không hợp lệ
                     </label>
                   )}
                 {value &&
-                  value === userNameValue &&
+                  id === "userName" &&
                   isNaN(value) &&
                   !checkValidEmail(value) && (
                     <label className="text-primary">Email không hợp lệ</label>
                   )}
                 {value &&
-                  (value === passwordValue || value === confirmPasswordValue) &&
+                  (id === "password" || id === "confirmPassword") &&
                   value.length < 8 && (
                     <label className="text-primary">
                       Mật khẩu phải có ít nhất 8 kí tự <br></br>
                     </label>
                   )}
                 {value &&
-                  value === confirmPasswordValue &&
+                  id === "confirmPassword" &&
                   passwordValue &&
                   value !== passwordValue && (
                     <label className="text-primary">

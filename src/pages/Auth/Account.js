@@ -39,7 +39,7 @@ function Account() {
             <span className="col-span-1">Mật khẩu:</span>
             <p className="col-span-2 font-normal flex items-center">
               {!showPassword
-                ? "********"
+                ? "**********"
                 : JSON.parse(localStorage.getItem("user")).password}
               {showPassword && (
                 <span onClick={() => setShowPassword(false)}>

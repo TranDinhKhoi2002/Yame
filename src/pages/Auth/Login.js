@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,12 +7,16 @@ import NavigationLayout from "../../components/NavigationLayout/NavigationLayout
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
 import * as request from "../../utils/request";
 import { authActions } from "../../store/auth";
+import {
+  checkValidEmail,
+  checkValidVietNamPhoneNumber,
+} from "../../utils/validate";
 
 function Login(props) {
   const [loginWithPhoneNumber, setLoginWithPhoneNumber] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
-  const userNameInputRef = useRef();
-  const passwordInputRef = useRef();
+  const [userNameValue, setUserNameValue] = useState();
+  const [passwordValue, setPasswordValue] = useState();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -21,9 +25,21 @@ function Login(props) {
 
     try {
       setIsLoading(true);
+
+      if (
+        loginWithPhoneNumber &&
+        !checkValidVietNamPhoneNumber(userNameValue)
+      ) {
+        throw new Error("Số điện thoại không hợp lệ");
+      }
+
+      if (!loginWithPhoneNumber && !checkValidEmail(userNameValue)) {
+        throw new Error("Email không hợp lệ");
+      }
+
       const isValid = await request.checkValidUser(
-        userNameInputRef.current.value,
-        passwordInputRef.current.value
+        userNameValue,
+        passwordValue
       );
 
       if (isValid) {
@@ -32,8 +48,8 @@ function Login(props) {
         );
         dispatch(
           authActions.login({
-            userName: userNameInputRef.current.value,
-            password: passwordInputRef.current.value,
+            userName: userNameValue,
+            password: passwordValue,
           })
         );
         setIsLoading(false);
@@ -57,6 +73,10 @@ function Login(props) {
     navigate("/signup");
   };
 
+  const forgetPasswordHandler = () => {
+    navigate("/forget-password");
+  };
+
   return (
     <NavigationLayout title="Đăng nhập">
       <div className="w-[80%] md:w-[55%] mx-auto my-12">
@@ -73,21 +93,32 @@ function Login(props) {
             <label className="col-span-1" htmlFor="phoneNumber">
               {loginWithPhoneNumber ? "Điện thoại" : "Email"}
             </label>
-            <input
-              ref={userNameInputRef}
-              className="col-span-2 h-[43px] bg-[#e8f0fe] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
-              type="text"
-              id="phoneNumber"
-              name="phoneNumber"
-              minLength={10}
-            />
+            <div className="col-span-2">
+              <input
+                onBlur={(e) => setUserNameValue(e.target.value)}
+                className="w-full h-[43px] bg-[#e8f0fe] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                minLength={10}
+              />
+              {loginWithPhoneNumber &&
+                !checkValidVietNamPhoneNumber(userNameValue) && (
+                  <label className="text-primary">
+                    Số điện thoại không hợp lệ
+                  </label>
+                )}
+              {!loginWithPhoneNumber && !checkValidEmail(userNameValue) && (
+                <label className="text-primary">Email không hợp lệ</label>
+              )}
+            </div>
           </div>
           <div className="grid grid-cols-3 mt-5">
             <label className="col-span-1" htmlFor="password">
               Mật khẩu
             </label>
             <input
-              ref={passwordInputRef}
+              onBlur={(e) => setPasswordValue(e.target.value)}
               className="col-span-2 h-[43px] bg-[#e8f0fe] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
               type="password"
               id="password"
@@ -97,7 +128,10 @@ function Login(props) {
           <div className="grid grid-cols-3 mt-2">
             <span className="col-span-1"></span>
             <div className="col-span-2 text-left">
-              <span className="text-[14px] font-normal hover:text-primary transition duration-150 cursor-pointer">
+              <span
+                onClick={forgetPasswordHandler}
+                className="text-[14px] font-normal hover:text-primary transition duration-150 cursor-pointer"
+              >
                 Quên mật khẩu
               </span>
               <span className="text-[14px] mx-3">hoặc</span>
