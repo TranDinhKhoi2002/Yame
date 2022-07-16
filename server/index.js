@@ -11,11 +11,11 @@ const app = express();
 app.use(cors());
 
 app.get("/forget-password", (req, res, next) => {
-  const { recipient } = req.query;
+  const { recipient, code } = req.query;
 
   client.messages
     .create({
-      body: "Your verification code is 123",
+      body: "Your verification code is: " + code,
       to: "+84" + recipient,
       from: "+17633739126",
     })

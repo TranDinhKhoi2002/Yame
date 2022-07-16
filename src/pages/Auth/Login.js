@@ -103,6 +103,7 @@ function Login(props) {
                 minLength={10}
               />
               {loginWithPhoneNumber &&
+                userNameValue &&
                 !checkValidVietNamPhoneNumber(userNameValue) && (
                   <label className="text-primary">
                     Số điện thoại không hợp lệ

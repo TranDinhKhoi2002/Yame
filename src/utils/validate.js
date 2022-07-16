@@ -1,6 +1,6 @@
 export const checkValidEmail = (email) => {
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (!email.match(regex)) {
+  if (!email || !email.match(regex)) {
     return false;
   }
 

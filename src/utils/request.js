@@ -74,4 +74,15 @@ export const checkValidUser = async (userName, password) => {
   return false;
 };
 
+export const updatePassword = async (userName, newHashedPassword) => {
+  const response = await request.get("users.json");
+  const data = await response.data;
+  const key = Object.keys(data).find((key) => data[key].userName === userName);
+
+  if (key) {
+    const updatedUser = { ...data[key], hashedPassword: newHashedPassword };
+    return await request.put(`/users/${key}.json`, updatedUser);
+  }
+};
+
 export default request;
