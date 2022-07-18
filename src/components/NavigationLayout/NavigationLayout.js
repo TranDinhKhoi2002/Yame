@@ -1,13 +1,22 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { authActions } from "../../store/auth";
 
 function NavigationLayout(props) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
 
   const backHandler = () => {
     navigate(-1);
+  };
+
+  const logoutHandler = () => {
+    dispatch(authActions.logout());
+    navigate("/login");
   };
 
   return (
@@ -23,6 +32,15 @@ function NavigationLayout(props) {
         <strong className="overflow-hidden text-ellipsis whitespace-nowrap">
           {props.title}
         </strong>
+        {location.pathname === "/account" && (
+          <div
+            onClick={logoutHandler}
+            className="hover:text-primary transition duration-150 cursor-pointer"
+          >
+            <FontAwesomeIcon icon={faSignOut} className="ml-1 mr-3" />
+            <span className="font-normal">Đăng xuất</span>
+          </div>
+        )}
       </div>
       {props.children}
     </div>

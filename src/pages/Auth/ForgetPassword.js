@@ -9,6 +9,7 @@ import {
 } from "../../utils/validate";
 import * as request from "../../utils/request";
 import { hashSync } from "bcryptjs";
+import emailjs from "@emailjs/browser";
 
 let verificationCode;
 
@@ -17,24 +18,54 @@ function ForgetPassword(props) {
   const [code, setCode] = useState();
   const [passwordValue, setPasswordValue] = useState();
   const [confirmPasswordValue, setConfirmPasswordValue] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const signupHandler = () => {
     navigate("/signup");
   };
 
-  const sendVerificationCodeHandler = () => {
-    if (checkValidUserNameHandler()) {
-      verificationCode = Math.floor(Math.random() * 1000000);
+  const sendVerificationCodeHandler = async () => {
+    setIsLoading(true);
+    const existingUser = await request.getExistingUser(userNameValue);
+    if (!existingUser) {
+      toast.error(
+        <ToastifyMessage title="Lỗi" message="Tên đăng nhập không tồn tại" />
+      );
+      setIsLoading(false);
+      return;
+    }
 
+    verificationCode = Math.floor(Math.random() * 1000000);
+    if (!isNaN(userNameValue) && checkValidVietNamPhoneNumber(userNameValue)) {
       fetch(
         `http://localhost:4000/forget-password?recipient=${userNameValue}&code=${verificationCode}`
       ).catch((err) => console.log(err));
 
       console.log(verificationCode);
+    } else if (isNaN(userNameValue) && checkValidEmail(userNameValue)) {
+      await emailjs.send(
+        "service_rnc01bw",
+        "template_gyx5uzt",
+        {
+          to_name: userNameValue,
+          message: verificationCode,
+          from_email: "",
+          to_email: userNameValue,
+        },
+        "6ZZL-ODHIXurOO_2n"
+      );
     } else {
-      console.log("loi");
+      alert("Có lỗi xảy ra khi gửi mã xác nhận, vui lòng thử lại");
+      return;
     }
+    toast.success(
+      <ToastifyMessage
+        title="Quên mật khẩu"
+        message="Đã gửi mã xác nhận đến số điện thoại / email"
+      />
+    );
+    setIsLoading(false);
   };
 
   const checkValidUserNameHandler = () => {
@@ -77,8 +108,10 @@ function ForgetPassword(props) {
     if (message) {
       toast.error(<ToastifyMessage title="Quên mật khẩu" message={message} />);
     } else {
+      setIsLoading(true);
       await request.updatePassword(userNameValue, hashSync(passwordValue));
 
+      setIsLoading(false);
       toast.success(
         <ToastifyMessage
           title="Quên mật khẩu"
@@ -117,6 +150,11 @@ function ForgetPassword(props) {
         <h3 className="text-[1.75rem] text-center font-medium leading-[1.2] mb-6">
           Quên mật khẩu
         </h3>
+        {isLoading && (
+          <p className="text-center text-[#308f69] font-normal">
+            Đang thực thi...
+          </p>
+        )}
         <form>
           {elements.map(([id, label, value, setValue, type], index) => (
             <div key={index} className="grid grid-cols-3 my-5">
@@ -134,7 +172,7 @@ function ForgetPassword(props) {
                 {id === "userName" && (
                   <span
                     onClick={sendVerificationCodeHandler}
-                    className="absolute ml-3 font-normal hover:text-primary transition duration-150 cursor-pointer"
+                    className="md:absolute md:ml-3 font-normal hover:text-primary transition duration-150 cursor-pointer"
                   >
                     Lấy mã
                   </span>
@@ -165,7 +203,8 @@ function ForgetPassword(props) {
                   )}
                 {id === "confirm-new-password" &&
                   passwordValue &&
-                  value !== passwordValue && (
+                  value !== passwordValue &&
+                  confirmPasswordValue && (
                     <label className="text-primary">
                       Mật khẩu không trùng khớp, vui lòng nhập lại
                     </label>

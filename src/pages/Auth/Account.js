@@ -18,10 +18,10 @@ function Account() {
     };
 
     getUser();
-  });
+  }, []);
 
   return (
-    <NavigationLayout title="Thông tin tài khoản">
+    <NavigationLayout>
       <div className="w-[80%] md:w-[55%] mx-auto my-12">
         <h3 className="text-[1.75rem] text-center font-medium leading-[1.2] mb-6">
           Thông tin tài khoản

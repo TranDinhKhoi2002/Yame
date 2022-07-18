@@ -28,8 +28,9 @@ const cartSlice = createSlice({
     removeFromCart(state, action) {
       state.products = state.products.filter(
         (item) =>
-          item.product.id === action.payload.id &&
-          item.size !== action.payload.size
+          (item.product.id === action.payload.id &&
+            item.size !== action.payload.size) ||
+          item.product.id !== action.payload.id
       );
 
       localStorage.removeItem("products");

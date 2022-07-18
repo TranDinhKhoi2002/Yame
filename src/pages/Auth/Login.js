@@ -109,9 +109,11 @@ function Login(props) {
                     Số điện thoại không hợp lệ
                   </label>
                 )}
-              {!loginWithPhoneNumber && !checkValidEmail(userNameValue) && (
-                <label className="text-primary">Email không hợp lệ</label>
-              )}
+              {!loginWithPhoneNumber &&
+                userNameValue &&
+                !checkValidEmail(userNameValue) && (
+                  <label className="text-primary">Email không hợp lệ</label>
+                )}
             </div>
           </div>
           <div className="grid grid-cols-3 mt-5">
