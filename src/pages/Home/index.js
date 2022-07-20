@@ -24,7 +24,7 @@ function Home() {
           alt="MỞ BÁN"
           width="300"
           height="300"
-          src="https://cmsv2.yame.vn/uploads/3cbab679-c33f-4eb5-a2b8-6954b5d8453b/Banner-web-2.jpg?quality=80&w=0&h=0"
+          src="https://cmsv2.yame.vn/uploads/530df4ed-897b-4c7f-b6db-9f9154a1fbca/banner-1-chu.jpg?quality=80&w=0&h=0"
         />
       </div>
       <MainCarousel />
@@ -39,7 +39,7 @@ function Home() {
       </div>
       <Products images={homeTrousersImages} />
       <div className="flex justify-center mt-3">
-        <Image src="https://cmsv2.yame.vn/uploads/14c7e7a2-e21d-4d22-a03b-ee2e374dcf0b/Sale_off_13.06.jpg?quality=80&w=0&h=0" />
+        <Image src="https://cmsv2.yame.vn/uploads/61368ead-b71b-4d0f-9ee1-d388e2aa3d67/Banner_50off.jpg?quality=80&w=0&h=0" />
       </div>
       <div className="text-center">
         <p className="text-2xl pt-5 pb-2">Các sản phẩm giảm giá</p>

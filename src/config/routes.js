@@ -10,6 +10,7 @@ const routesConfig = {
   account: "/account",
   productsType: "/type/:name",
   cart: "/cart",
+  search: "/search",
 };
 
 export default routesConfig;

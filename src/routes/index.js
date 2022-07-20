@@ -10,6 +10,7 @@ import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
 import Account from "../pages/Auth/Account";
 import ForgetPassword from "../pages/Auth/ForgetPassword";
+import Search from "../pages/Home/Search";
 
 export const routes = [
   { path: config.routes.home, component: Home },
@@ -23,4 +24,5 @@ export const routes = [
   { path: config.routes.account, component: Account },
   { path: config.routes.productsType, component: ProductsType },
   { path: config.routes.cart, component: Cart },
+  { path: config.routes.search, component: Search },
 ];

@@ -295,7 +295,7 @@ export const simpleShirt = [
   },
 ];
 
-const products = homeHotProductsImages.concat(
+export const products = homeHotProductsImages.concat(
   homeTrousersImages,
   saleOffImages
 );

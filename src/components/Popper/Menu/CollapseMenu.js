@@ -33,7 +33,10 @@ function CollapseMenu(props) {
       <ul {...getCollapseProps()} className="ml-10">
         {props.children.map((item, index) => (
           <li key={index} className="my-2">
-            <Link to={item.path} state={{ title: item.name }}>
+            <Link
+              to={item.path}
+              state={{ title: item.name, products: item.products }}
+            >
               {item.name}
             </Link>
           </li>

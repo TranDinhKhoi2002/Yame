@@ -12,6 +12,7 @@ import NotificationCart from "./NotificationCart";
 import { cartActions } from "../../store/cart";
 
 import config from "../../config";
+import { checkValidVietNamPhoneNumber } from "../../utils/validate";
 
 function Order() {
   const [homeShipChecked, setHomeShipChecked] = useState(true);
@@ -31,13 +32,15 @@ function Order() {
   const confirmOrderHandler = async (e) => {
     e.preventDefault();
 
+    let message;
     if (!nameValue || !phoneNumberValue || !addressValue || !noteValue) {
-      toast.error(
-        <ToastifyMessage
-          title="Lỗi đặt hàng"
-          message="Vui lòng nhập đầy đủ thông tin"
-        />
-      );
+      message = "Vui lòng nhập đầy đủ thông tin";
+    } else if (!checkValidVietNamPhoneNumber(phoneNumberValue)) {
+      message = "Số điện thoại không hợp lệ";
+    }
+
+    if (message) {
+      toast.error(<ToastifyMessage title="Lỗi đặt hàng" message={message} />);
       return;
     }
 
@@ -47,8 +50,18 @@ function Order() {
       address: addressValue.trim(),
       note: noteValue.trim(),
     };
-    await request.postOrder("orders", order);
-    setShowNotification(true);
+
+    try {
+      await request.postOrder("orders", order);
+      setShowNotification(true);
+    } catch (err) {
+      toast.error(
+        <ToastifyMessage
+          title="Lỗi đặt hàng"
+          message="Đã xảy ra lỗi khi đặt hàng"
+        />
+      );
+    }
   };
 
   const closeNotification = () => {
@@ -85,10 +98,10 @@ function Order() {
             placeholder="Số điện thoại"
           />
           {(phoneNumberValue === "" ||
-            (phoneNumberValue && phoneNumberValue.trim().length === 0)) && (
-            <label className="text-primary">
-              Vui lòng nhập đầy đủ thông tin
-            </label>
+            (phoneNumberValue && phoneNumberValue.trim().length === 0) ||
+            (phoneNumberValue &&
+              !checkValidVietNamPhoneNumber(phoneNumberValue))) && (
+            <label className="text-primary">Số điện thoại không hợp lệ</label>
           )}
         </div>
         <div>
