@@ -96,7 +96,7 @@ function Login(props) {
             <div className="col-span-2">
               <input
                 onBlur={(e) => setUserNameValue(e.target.value)}
-                className="w-full h-[43px] bg-[#e8f0fe] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
+                className="w-full h-[43px] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
                 type="text"
                 id="phoneNumber"
                 name="phoneNumber"
@@ -122,7 +122,7 @@ function Login(props) {
             </label>
             <input
               onBlur={(e) => setPasswordValue(e.target.value)}
-              className="col-span-2 h-[43px] bg-[#e8f0fe] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
+              className="col-span-2 h-[43px] outline-none py-[0.375rem] px-3 border-[1px] border-solid border-[#ced4da] rounded-[0.25rem] focus:border-primary transition duration-150"
               type="password"
               id="password"
               name="password"

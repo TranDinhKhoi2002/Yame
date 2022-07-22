@@ -10,7 +10,6 @@ import config from "../../config";
 
 const Header = (props) => {
   const [search, setSearch] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
 
   function openSearchHandler() {
     setSearch(true);
@@ -25,12 +24,7 @@ const Header = (props) => {
 
   if (search) {
     return (
-      <SearchInput
-        className={headerClasses}
-        value={searchValue}
-        setValue={setSearchValue}
-        closeSearch={closeSearchHandler}
-      />
+      <SearchInput className={headerClasses} closeSearch={closeSearchHandler} />
     );
   }
 

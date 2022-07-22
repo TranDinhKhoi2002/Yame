@@ -5,7 +5,8 @@ function ProductItem(props) {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-    navigate(`/${props.forDetail ? props.product.to : props.image.to}`);
+    console.log(props.image.to);
+    navigate(`${props.forDetail ? props.image.to : `/${props.image.to}`}`);
   };
 
   return (
@@ -14,7 +15,7 @@ function ProductItem(props) {
         <img
           onClick={navigateHandler}
           src={
-            props.forDetail ? props.product.images.mainImg : props.image.url[0]
+            props.forDetail ? props.image.images.mainImg : props.image.url[0]
           }
           alt=""
         />
@@ -23,9 +24,7 @@ function ProductItem(props) {
         <img
           onClick={navigateHandler}
           alt=""
-          src={
-            props.forDetail ? props.product.images.subImg : props.image.url[1]
-          }
+          src={props.forDetail ? props.image.images.subImg : props.image.url[1]}
         />
       </div>
       {!props.forDetail && (

@@ -17,7 +17,7 @@ function ProductInfor(props) {
   return (
     <div className="md:grid grid-cols-3 gap-6 mt-3">
       <div className="xsm:min-h-[640px]">
-        <ProductItem forDetail product={product} />
+        <ProductItem forDetail image={product} />
       </div>
       <div className="col-span-2 px-4">
         <div className="md:grid grid-cols-3 gap-8">

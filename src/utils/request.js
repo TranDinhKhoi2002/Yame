@@ -85,4 +85,17 @@ export const updatePassword = async (userName, newHashedPassword) => {
   }
 };
 
+export const searchProducts = async (keyword) => {
+  const response = await request.get("products.json");
+
+  const data = await response.data;
+  const products = [];
+  Object.keys(data).forEach((key) => {
+    if (data[key].name.toLowerCase().includes(keyword.toLowerCase())) {
+      products.push(data[key]);
+    }
+  });
+  return products;
+};
+
 export default request;
