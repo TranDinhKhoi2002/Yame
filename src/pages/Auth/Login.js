@@ -55,7 +55,7 @@ function Login(props) {
         setIsLoading(false);
 
         setTimeout(() => {
-          navigate("/");
+          navigate("/", { replace: true });
         }, 2000);
       } else {
         throw new Error(

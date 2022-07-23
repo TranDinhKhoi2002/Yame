@@ -16,7 +16,7 @@ function NavigationLayout(props) {
 
   const logoutHandler = () => {
     dispatch(authActions.logout());
-    navigate("/login");
+    navigate("/login", { replace: true });
   };
 
   return (

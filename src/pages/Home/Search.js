@@ -45,7 +45,7 @@ function Search(props) {
     <NavigationLayout title="Tìm kiếm sản phẩm">
       {!isLoading && (
         <div className="mt-3 px-8 xl:px-0">
-          <form className="grid grid-cols-6 gap-7">
+          <form className="grid grid-cols-6 gap-2 xsm:gap-7">
             <input
               value={searchValue}
               onChange={inputChangeHandler}
