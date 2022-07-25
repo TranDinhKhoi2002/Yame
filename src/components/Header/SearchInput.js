@@ -15,7 +15,7 @@ function SearchInput(props) {
       navigate("/search", { state: { keyword: debouncedValue } });
       props.closeSearch();
     }
-  }, [debouncedValue]);
+  }, [debouncedValue, navigate, props]);
 
   const inputChangeHandler = (e) => {
     const searchInputValue = e.target.value;

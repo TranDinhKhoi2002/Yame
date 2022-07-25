@@ -21,7 +21,7 @@ function Home() {
       <div className="animate-image flex justify-center pt-[70px] lg:pt-[79px]">
         <Image
           to={config.routes.flashSale}
-          alt="MỞ BÁN"
+          alt="Discount"
           width="300"
           height="300"
           src="https://cmsv2.yame.vn/uploads/530df4ed-897b-4c7f-b6db-9f9154a1fbca/banner-1-chu.jpg?quality=80&w=0&h=0"
