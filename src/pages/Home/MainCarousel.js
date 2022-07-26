@@ -20,8 +20,9 @@ function MainCarousel() {
       showThumbs={false}
       swipeable={true}
       emulateTouch={true}
-      // autoPlay={true}
-      // interval={3000}
+      animationHandler="slide"
+      autoPlay={true}
+      interval={3000}
       infiniteLoop={true}
       showArrows={false}
       showStatus={false}

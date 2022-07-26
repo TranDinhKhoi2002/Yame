@@ -107,10 +107,10 @@ export const homeTrousersImages = [
     price: 200,
   },
   {
-    to: "shop/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5",
+    to: "shop/quan-jean-skinny-y-toi-gian",
     url: [
-      "https://cdn2.yame.vn/pimg/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5-0020538/df272cc6-6f3b-2e00-23a9-0018ac6b3846.jpg?w=540&h=756&c=true",
-      "https://cdn2.yame.vn/pimg/quan-dai-jean-straight-on-gian-y-nguyen-ban-ver5-0020538/e953fab7-0bcb-2f00-d1f1-0018ac6b38e5.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/quan-jean-skinny-y2010-a03-0019733/c077b5f7-6135-0100-f60f-0018be85d28f.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/quan-jean-skinny-y2010-a03-0019733/1db40421-2b48-0200-2d1f-0018be85d337.jpg?w=540&h=756",
     ],
     price: 200,
   },
@@ -314,4 +314,10 @@ getProductsFromTypes(simpleProducts, "on-gian");
 const simplifyProducts = [];
 getProductsFromTypes(simplifyProducts, "toi-gian");
 
-export { simpleProducts, simplifyProducts };
+const spaceProducts = [];
+getProductsFromTypes(spaceProducts, "ngan-ha");
+
+const basicProducts = []; // nguyen ban
+getProductsFromTypes(basicProducts, "nguyen-ban");
+
+export { simpleProducts, simplifyProducts, spaceProducts, basicProducts };

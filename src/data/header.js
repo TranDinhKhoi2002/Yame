@@ -1,9 +1,11 @@
 import {
+  basicProducts,
   simpleProducts,
   simpleShirt,
   simpleTShirt,
   simpleTShirt2,
   simplifyProducts,
+  spaceProducts,
 } from "./images";
 
 export const NAV_ITEMS = [
@@ -43,7 +45,7 @@ export const NAV_ITEMS = [
     items: [
       { name: "GU 12 Vị Anh Hùng Dân Tộc", path: "/type/12-anh-hung-dan-toc" },
       { name: "GU Thần Cổ Đại", path: "/type/than-co-dai" },
-      { name: "GU Ngân Hà", path: "/type/ngan-ha" },
+      { name: "GU Ngân Hà", path: "/type/ngan-ha", products: spaceProducts },
     ],
   },
   {
@@ -52,7 +54,11 @@ export const NAV_ITEMS = [
     hasChildren: true,
     items: [
       { name: "GU Linh vật", path: "/type/linh-vat" },
-      { name: "GU Y Nguyên Bản 18-", path: "/type/y-nguyen-ban-18-" },
+      {
+        name: "GU Y Nguyên Bản 18-",
+        path: "/type/y-nguyen-ban-18-",
+        products: basicProducts,
+      },
     ],
   },
 ];
@@ -72,30 +78,12 @@ export const DETAILS_ITEMS = [
         path: "/type/ao-thun-form-tieu-chuan",
       },
       {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
+        name: "Áo Thun Form Rộng",
+        path: "/type/ao-thun-form-rong",
       },
       {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
-      },
-    ],
-  },
-  {
-    title: "QUẦN DÀI",
-    to: "/type/quan-dai",
-    items: [
-      {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
-      },
-      {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
-      },
-      {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
+        name: "Áo thun 3 Lỗ",
+        path: "/type/ao-thun-3-lo",
       },
     ],
   },
@@ -104,16 +92,34 @@ export const DETAILS_ITEMS = [
     to: "/type/quan-dai",
     items: [
       {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
+        name: "Quần Jogger",
+        path: "/type/quan-jogger",
       },
       {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
+        name: "Quần Tây",
+        path: "/type/quan-tay",
       },
       {
-        name: "Áo Thun Form Tiêu Chuẩn",
-        path: "/type/ao-thun-form-tieu-chuan",
+        name: "Quần Ống Rộng",
+        path: "/type/quan-ong-rong",
+      },
+    ],
+  },
+  {
+    title: "PHỤ KIỆN",
+    to: "/type/phu-kien",
+    items: [
+      {
+        name: "Nón",
+        path: "/type/non",
+      },
+      {
+        name: "Tất - Vớ",
+        path: "/type/tat-vo",
+      },
+      {
+        name: "Dây Nịt Da",
+        path: "/type/day-nit-da",
       },
     ],
   },
