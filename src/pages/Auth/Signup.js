@@ -2,6 +2,7 @@ import { hashSync } from "bcryptjs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
@@ -113,6 +114,9 @@ function Signup() {
 
   return (
     <NavigationLayout title="Đăng ký">
+      <Helmet>
+        <title>Đăng Ký</title>
+      </Helmet>
       <div className="w-[90%] md:w-[55%] mx-auto my-12">
         <h3 className="text-[1.75rem] font-medium leading-[1.2] mb-6 text-center">
           Đăng ký tài khoản

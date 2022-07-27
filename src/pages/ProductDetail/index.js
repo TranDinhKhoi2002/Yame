@@ -5,6 +5,7 @@ import ProductInfor from "./ProductInfor";
 import * as request from "../../utils/request";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import { Helmet } from "react-helmet";
 
 function ProductDetail(props) {
   const [product, setProduct] = useState({});
@@ -25,6 +26,13 @@ function ProductDetail(props) {
 
   return (
     <NavigationLayout title={product.name}>
+      <Helmet>
+        {!loading ? (
+          <title>Sản Phẩm: {product.name}</title>
+        ) : (
+          <title>Đang Tải...</title>
+        )}
+      </Helmet>
       {!loading ? <ProductInfor product={product} /> : <LoadingSpinner />}
     </NavigationLayout>
   );

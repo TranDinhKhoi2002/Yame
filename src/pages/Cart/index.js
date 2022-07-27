@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
+import { Helmet } from "react-helmet";
 
 import images from "../../assets/images";
 
@@ -13,6 +14,9 @@ function Cart(props) {
 
   return (
     <NavigationLayout title="Thông tin giỏ hàng của bạn">
+      <Helmet>
+        <title>Giỏ Hàng</title>
+      </Helmet>
       {products.length === 0 ? (
         <div className="text-center my-6">
           <h3 className="text-2xl font-medium">Bạn chưa chọn sản phẩm.</h3>

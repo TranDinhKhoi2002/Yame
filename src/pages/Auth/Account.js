@@ -4,6 +4,7 @@ import {
   ShowPasswordIcon,
 } from "../../components/Icons/Icons";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
+import { Helmet } from "react-helmet";
 import * as request from "../../utils/request";
 
 function Account() {
@@ -22,6 +23,9 @@ function Account() {
 
   return (
     <NavigationLayout>
+      <Helmet>
+        <title>Tài Khoản</title>
+      </Helmet>
       <div className="w-[80%] md:w-[55%] mx-auto my-12">
         <h3 className="text-[1.75rem] text-center font-medium leading-[1.2] mb-6">
           Thông tin tài khoản

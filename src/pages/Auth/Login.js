@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
@@ -79,6 +80,9 @@ function Login(props) {
 
   return (
     <NavigationLayout title="Đăng nhập">
+      <Helmet>
+        <title>Đăng Nhập</title>
+      </Helmet>
       <div className="w-[80%] md:w-[55%] mx-auto my-12">
         <h3 className="text-[1.75rem] text-center font-medium leading-[1.2] mb-6">
           Đăng nhập với {loginWithPhoneNumber ? "số điện thoại" : "email"}

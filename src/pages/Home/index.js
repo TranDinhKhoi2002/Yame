@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Helmet } from "react-helmet";
 
 import MainCarousel from "./MainCarousel";
 import Intro from "./Intro";
@@ -18,6 +19,9 @@ import config from "../../config";
 function Home() {
   return (
     <Fragment>
+      <Helmet>
+        <title>Yame | Cửa Hàng Online Quần Áo Thời Trang Nam Nữ</title>
+      </Helmet>
       <div className="animate-image flex justify-center pt-[70px] lg:pt-[79px]">
         <Image
           to={config.routes.flashSale}

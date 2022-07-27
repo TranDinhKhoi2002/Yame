@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import ToastifyMessage from "../../components/ToastifyMessage/ToastifyMessage";
+import { Helmet } from "react-helmet";
 import {
   checkValidEmail,
   checkValidVietNamPhoneNumber,
@@ -145,6 +146,9 @@ function ForgetPassword(props) {
 
   return (
     <NavigationLayout title="Quên mật khẩu">
+      <Helmet>
+        <title>Khôi Phục Mật Khẩu</title>
+      </Helmet>
       <div className="w-[80%] md:w-[55%] mx-auto my-12">
         {" "}
         <h3 className="text-[1.75rem] text-center font-medium leading-[1.2] mb-6">
