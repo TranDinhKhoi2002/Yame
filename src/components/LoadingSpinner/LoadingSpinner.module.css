@@ -14,7 +14,7 @@
   border-radius: 50%;
   border: 6px solid teal;
   border-color: teal teal teal transparent;
-  animation: spinner 1s line infinite;
+  animation: spinner 1s linear infinite;
   margin: 0 auto;
 }
 

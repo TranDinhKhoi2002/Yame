@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
+import { Helmet } from "react-helmet";
 import Products from "../../components/Products/Products";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import * as request from "../../utils/request";
@@ -43,6 +44,9 @@ function Search() {
 
   return (
     <NavigationLayout title="Tìm kiếm sản phẩm">
+      <Helmet>
+        <title>Tìm kiếm sản phẩm</title>
+      </Helmet>
       <div className="mt-3 px-8 xl:px-0">
         <form className="grid grid-cols-6 gap-2 xsm:gap-7">
           <input
