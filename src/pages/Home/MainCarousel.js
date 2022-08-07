@@ -35,9 +35,9 @@ function MainCarousel() {
         >
           <div>
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
-              <Link to={images[key].item1.to}>{images[key].item1.title}</Link>
+              <Link to="/">{images[key].item1.title}</Link>
             </h4>
-            <Link to={images[key].item1.to}>
+            <Link to="/">
               <img alt="" src={images[key].item1.url} />
             </Link>
             <div className="grid grid-cols-4 gap-1">
@@ -50,9 +50,9 @@ function MainCarousel() {
           </div>
           <div>
             <h4 className="inline-block md:float-left font-normal lg:text-2xl pb-3 text-[#444444] hover:text-[#0056b3] transition duration-300">
-              <Link to={images[key].item2.to}>{images[key].item2.title}</Link>
+              <Link to="/">{images[key].item2.title}</Link>
             </h4>
-            <Link to={images[key].item2.to}>
+            <Link to="/">
               <img alt="" src={images[key].item2.url} />
             </Link>
             <div className="grid grid-cols-4 gap-1">

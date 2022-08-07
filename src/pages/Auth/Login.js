@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet";
@@ -20,6 +20,13 @@ function Login(props) {
   const [passwordValue, setPasswordValue] = useState();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.auth.isAuth);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate("/");
+    }
+  }, [isLoggedIn, navigate]);
 
   const loginHandler = async (e) => {
     e.preventDefault();

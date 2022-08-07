@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
-import { NAV_ITEMS } from "../../data/header";
+import { DETAILS_ITEMS, NAV_ITEMS } from "../../data/header";
 import CollapseMenu from "../Popper/Menu/CollapseMenu";
 
 import "./Modal.css";
@@ -15,6 +15,8 @@ const animationTiming = {
 };
 
 const Modal = (props) => {
+  const items = NAV_ITEMS.concat(DETAILS_ITEMS);
+
   return ReactDOM.createPortal(
     <CSSTransition
       in={props.show}
@@ -39,7 +41,7 @@ const Modal = (props) => {
         </div>
         <div className="overflow-y-scroll p-5 h-[calc(100vh-140px)]">
           <ul>
-            {NAV_ITEMS.map((item, index) => (
+            {items.map((item, index) => (
               <li key={index} className="my-3">
                 {item.hasChildren ? (
                   <CollapseMenu

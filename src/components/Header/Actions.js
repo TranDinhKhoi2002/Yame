@@ -40,18 +40,20 @@ function Actions(props) {
       >
         <FontAwesomeIcon className="ml-[6px] text-[16px]" icon={faUser} />
       </button>
-      <button
-        onClick={previewCartHandler}
-        className="relative w-4 h-4 leading-4 bg-transparent text-[#868995] cursor-pointer mx-3 transition duration-300 ease-linear hover:text-[#3d3f45]"
-      >
-        <FontAwesomeIcon
-          className="ml-[6px] text-[16px]"
-          icon={faBagShopping}
-        />
-        <span className="absolute top-[-11px] left-4 w-5 h-5 leading-5 rounded-full bg-[#ee4266] text-white text-[12px]">
-          {products.length}
-        </span>
-      </button>
+      {isLoggedin && (
+        <button
+          onClick={previewCartHandler}
+          className="relative w-4 h-4 leading-4 bg-transparent text-[#868995] cursor-pointer mx-3 transition duration-300 ease-linear hover:text-[#3d3f45]"
+        >
+          <FontAwesomeIcon
+            className="ml-[6px] text-[16px]"
+            icon={faBagShopping}
+          />
+          <span className="absolute top-[-11px] left-4 w-5 h-5 leading-5 rounded-full bg-[#ee4266] text-white text-[12px]">
+            {products.length}
+          </span>
+        </button>
+      )}
       <button
         onClick={() => {
           props.showSideBar();

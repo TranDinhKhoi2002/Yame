@@ -17,7 +17,7 @@ function Intro() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 mt-6 xl:px-[3%] gap-0">
       {Object.keys(images).map((key, index) => (
-        <Image key={index} to={images[key].to} src={images[key].url} />
+        <Image key={index} to="/" src={images[key].url} />
       ))}
     </div>
   );

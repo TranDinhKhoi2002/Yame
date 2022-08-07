@@ -21,44 +21,24 @@ function CollapseFooter(props) {
       </div>
 
       <ul {...getCollapseProps()} className="mt-3">
-        <li>
-          <Link to="/page/gioi-thieu-ve-yame">Giới thiệu về YaMe.vn</Link>
-        </li>
-        <li>
-          <Link to="/page/tuyen-dung">Tuyển dụng</Link>
-        </li>
+        <li>Giới thiệu về YaMe.vn</li>
+        <li>Tuyển dụng</li>
         <li>.</li>
-        <li>
-          <Link to="/page/gioi-thieu-ve-yame">Quy chế hoạt động</Link>
-        </li>
-        <li>
-          <Link to="/page/gioi-thieu-ve-yame">Điều khoản mua bán</Link>
-        </li>
+        <li>Quy chế hoạt động</li>
+        <li>Điều khoản mua bán</li>
         <li>.</li>
-        <li>
-          <Link to="/page/gioi-thieu-ve-yame">Mã Voucher giảm giá</Link>
-        </li>
+        <li>Mã Voucher giảm giá</li>
         <br />
         <p>Đặt hàng và thu tiền tận nơi toàn quốc</p>
         <h5 className="text-xl font-medium">(028) 7307 1441</h5>
         <br />
         <h4 className="text-2xl font-medium mb-2">FAQ</h4>
         <ul>
-          <li>
-            <Link to="/page/van-chuyen">Vận chuyển</Link>
-          </li>
-          <li>
-            <Link to="/page/chinh-sach-doi-tra">Chính sách đổi trả</Link>
-          </li>
-          <li>
-            <Link to="/page/chinh-sach-bao-hanh">Chính sách bảo hành</Link>
-          </li>
-          <li>
-            <Link to="/page/khach-hang-vip">Khách hàng VIP</Link>
-          </li>
-          <li>
-            <Link to="/page/doi-tac-cung-cap">Đối tác cung cấp</Link>
-          </li>
+          <li>Vận chuyển</li>
+          <li>Chính sách đổi trả</li>
+          <li>Chính sách bảo hành</li>
+          <li>Khách hàng VIP</li>
+          <li>Đối tác cung cấp</li>
         </ul>
       </ul>
     </div>

@@ -3,7 +3,16 @@ function GeneralInfor(props) {
     <div className="my-3">
       <h4 className="text-2xl text-black">{props.name}</h4>
       <p className="text-black my-2">Mã số: {props.id}</p>
-      <h5 className="text-primary text-lg font-normal">{props.price} đ</h5>
+      {props.oldPrice ? (
+        <div className="flex items-center">
+          <h5 className="text-lg font-normal mr-3 line-through">
+            {props.oldPrice}
+          </h5>
+          <h5 className="text-primary text-lg font-normal">{props.price} đ</h5>
+        </div>
+      ) : (
+        <h5 className="text-primary text-lg font-normal">{props.price} đ</h5>
+      )}
     </div>
   );
 }

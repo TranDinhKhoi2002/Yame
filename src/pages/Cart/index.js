@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import NavigationLayout from "../../components/NavigationLayout/NavigationLayout";
 import { Helmet } from "react-helmet";
@@ -8,9 +8,18 @@ import images from "../../assets/images";
 import classes from "./Cart.module.css";
 import Order from "./Order";
 import DetailCart from "./DetailCart";
+import { useNavigate } from "react-router-dom";
 
 function Cart(props) {
   const products = useSelector((state) => state.cart.products);
+  const isLoggedIn = useSelector((state) => state.auth.isAuth);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [isLoggedIn, navigate]);
 
   return (
     <NavigationLayout title="Thông tin giỏ hàng của bạn">

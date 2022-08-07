@@ -26,6 +26,7 @@ function ProductInfor(props) {
               name={product.name}
               id={product.id}
               price={product.price}
+              oldPrice={product.oldPrice}
             />
             <TableSize onAddToCart={addToCartHandler} />
             <GuidanceSize />

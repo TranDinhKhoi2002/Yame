@@ -5,12 +5,11 @@ function ProductItem(props) {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-    console.log(props.image.to);
     navigate(`${props.forDetail ? props.image.to : `/${props.image.to}`}`);
   };
 
   return (
-    <div className="group flex relative overflow-hidden pb-[10px]">
+    <div className="group flex relative overflow-hidden pb-[22px]">
       <div className="group-hover:translate-x-[-100%] transition-all duration-700 ease-in-out cursor-pointer">
         <img
           onClick={navigateHandler}
@@ -28,7 +27,7 @@ function ProductItem(props) {
         />
       </div>
       {!props.forDetail && (
-        <div className="absolute inline-block top-[95%] sm:top-[97.3%] text-[11px] font-normal ml-1">
+        <div className="absolute inline-block top-[95%] sm:top-[97.3%] md:top-[95.2%] text-[11px] font-normal ml-1">
           {props.image.oldPrice && props.image.discountPrice ? (
             <Fragment>
               <span className="line-through">{props.image.oldPrice}</span>

@@ -28,7 +28,10 @@ function Menu({ items = [], children, detail = false }) {
                     <Link
                       className="hover:text-primary transition duration-300"
                       to={item.to}
-                      state={{ title: item.title }}
+                      state={{
+                        title: item.title,
+                        products: item.generalProducts,
+                      }}
                     >
                       {item.title}
                     </Link>
@@ -38,7 +41,13 @@ function Menu({ items = [], children, detail = false }) {
                           className="hover:text-primary transition duration-300"
                           key={index}
                         >
-                          <Link to={child.path} state={{ title: child.name }}>
+                          <Link
+                            to={child.path}
+                            state={{
+                              title: child.name,
+                              products: child.products,
+                            }}
+                          >
                             {child.name}
                           </Link>
                         </li>

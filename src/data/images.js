@@ -95,6 +95,30 @@ export const homeHotProductsImages = [
     ],
     price: 200,
   },
+  {
+    to: "shop/ao-thun-co-tron-the-thao-m36",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-the-thao-m36-0021077/26a3231b-3eac-0100-9d48-00194caba9d5.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-the-thao-m36-0021077/3741ad52-37d7-0200-6a1a-00194cabab74.jpg?w=540&h=756",
+    ],
+    price: 257,
+  },
+  {
+    to: "shop/ao-thun-co-tron-on-gian-ngan-ha-space-ver14",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-ngan-ha-space-ver14-0020548/e33d0e51-7b50-2300-54e3-0018b1dcfe51.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-ngan-ha-space-ver14-0020548/97e90ce0-662f-2400-100d-0018b1dcff0c.jpg?w=540&h=756",
+    ],
+    price: 199,
+  },
+  {
+    to: "shop/ao-thun-form-rong-co-tron-on-gian-y-nguyen-ban-ver72",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver72-0021031/91bb041d-1c9f-ff00-06c9-001952372914.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-y-nguyen-ban-ver72-0021031/a0b13363-c81e-0001-e926-001952372957.jpg?w=540&h=756",
+    ],
+    price: 180,
+  },
 ];
 
 export const homeTrousersImages = [
@@ -130,11 +154,27 @@ export const homeTrousersImages = [
     ],
     price: 200,
   },
+  {
+    to: "shop/quan-dai-sweatpants-linh-vat-olygre-ver1",
+    url: [
+      "https://cdn2.yame.vn/pimg/quan-dai-sweatpants-linh-vat-olygre-ver1-0020500/6daccbdb-3c40-7500-e124-0018b1dedb4c.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/quan-dai-sweatpants-linh-vat-olygre-ver1-0020500/cb60aa93-44b9-7600-cf41-0018b1dedc2b.jpg?w=540&h=756",
+    ],
+    price: 369,
+  },
+  {
+    to: "shop/quan-jogger-thun-y2010-bd-b21",
+    url: [
+      "https://cdn2.yame.vn/pimg/quan-jogger-thun-y2010-bd-b21-0019789/5184377b-db02-2400-e263-0018b9fadc55.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/quan-jogger-thun-y2010-bd-b21-0019789/4f6d90ee-7e39-2500-0259-0018b9fadcf4.jpg?w=540&h=756",
+    ],
+    price: 350,
+  },
 ];
 
 export const saleOffImages = [
   {
-    to: "giam-gia/ao-thun-co-tron-y-nguyen-ban-18--ver39",
+    to: "shop/ao-thun-co-tron-y-nguyen-ban",
     url: [
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-y-nguyen-ban-18--ver39-0020883/09105e01-36e0-0100-3edd-0019150f7bf8.jpg?w=540&h=756&c=true",
       "https://cdn2.yame.vn/pimg/ao-thun-co-tron-y-nguyen-ban-18--ver39-0020883/3f6747af-48e6-0200-93a6-0019150f7c55.jpg?w=540&h=756&c=true",
@@ -143,31 +183,49 @@ export const saleOffImages = [
     discountPrice: 180,
   },
   {
-    to: "giam-gia/ao-thun-sweater-don-gian-than-co-ai-anubis-ver7",
+    to: "shop/ao-thun-co-tron-than-co-ai-anubis-ver6",
     url: [
-      "https://cdn2.yame.vn/pimg/ao-thun-sweater-on-gian-than-co-ai-anubis-ver7-0020568/1321ecaf-f3c2-b600-acd9-001915165981.jpg?w=540&h=756&c=true",
-      "https://cdn2.yame.vn/pimg/ao-thun-sweater-on-gian-than-co-ai-anubis-ver7-0020568/71cae80f-aae1-b700-5f74-001915165a83.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-than-co-ai-anubis-ver6-0021063/625364bf-5465-3301-ad8f-001947fb07b2.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-than-co-ai-anubis-ver6-0021063/e9218cd2-bb5d-3401-4492-001947fb08cb.jpg?w=540&h=756",
     ],
-    oldPrice: 355,
-    discountPrice: 284,
+    oldPrice: 350,
+    discountPrice: 287,
   },
   {
-    to: "giam-gia/ao-thun-tn-tc-valknut-ver2",
+    to: "shop/quan-short-the-thao-m7",
     url: [
-      "https://cdn2.yame.vn/pimg/ao-thun-tn-tc-valknut-ver2-0019980/90443cdb-32f9-1d00-4fef-00181b243823.jpg?w=540&h=756&c=true",
-      "https://cdn2.yame.vn/pimg/ao-thun-tn-tc-valknut-ver2-0019980/da3f04ed-10fe-1e00-6f4d-00181b2438b0.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/quan-short-the-thao-m7-0020738/82f871e6-f152-4300-6899-00194cae3206.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/quan-short-the-thao-m7-0020738/76eee784-b0ed-4400-26d6-00194cae32ab.jpg?w=540&h=756",
     ],
     oldPrice: 185,
     discountPrice: 160,
   },
   {
-    to: "giam-gia/ao-thun-tn-tc-van-hien-chi-bang-min2",
+    to: "shop/ao-khoac-varsity-on-gian-y-nguyen-ban-ver43",
     url: [
-      "https://cdn2.yame.vn/pimg/ao-thun-tn-tc-van-hien-chi-bang-min2-0020009/70ebc050-a246-1900-8a1b-001810246fbf.jpg?w=540&h=756&c=true",
-      "https://cdn2.yame.vn/pimg/ao-thun-tn-tc-van-hien-chi-bang-min2-0020009/ff8eeb0f-078f-1a00-59ef-001810247046.jpg?w=540&h=756&c=true",
+      "https://cdn2.yame.vn/pimg/ao-khoac-varsity-on-gian-y-nguyen-ban-ver43-0020735/881a1f35-9898-ed00-52ec-00194cb33175.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-khoac-varsity-on-gian-y-nguyen-ban-ver43-0020735/d5bc31e7-be85-ee00-d19b-00194cb3333f.jpg?w=540&h=756",
     ],
-    oldPrice: 200,
-    discountPrice: 150,
+    oldPrice: 657,
+    discountPrice: 525,
+  },
+  {
+    to: "shop/ao-thun-co-tron-on-gian-12vahdt-van-xuan-kien-quoc-ver9",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-12vahdt-van-xuan-kien-quoc-ver9-0021165/e9beabc0-dd95-2901-527a-0019523804c5.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-12vahdt-van-xuan-kien-quoc-ver9-0021165/3d6a37b1-e11f-2a01-cab5-0019523804d2.jpg?w=540&h=756",
+    ],
+    oldPrice: 227,
+    discountPrice: 181.6,
+  },
+  {
+    to: "shop/ao-thun-co-tron-linh-vat-bbuff-ver10",
+    url: [
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-linh-vat-bbuff-ver10-0020445/bbe76d46-63c7-1700-1385-00189739ef77.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/ao-thun-co-tron-linh-vat-bbuff-ver10-0020445/10578842-cb24-1800-980e-00189739f009.jpg?w=540&h=756",
+    ],
+    oldPrice: 250,
+    discountPrice: 199,
   },
 ];
 
@@ -295,9 +353,37 @@ export const simpleShirt = [
   },
 ];
 
+export const items = [
+  {
+    to: "shop/non-u-y2010-a21",
+    url: [
+      "https://cdn2.yame.vn/pimg/non-u-y2010-a21-0019689/166b206d-407f-0c00-a7be-0018e46d7a08.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/non-u-y2010-a21-0019689/72e45b15-1266-0d00-f56f-0018e46d7a8f.jpg?w=540&h=756",
+    ],
+    price: 120,
+  },
+  {
+    to: "shop/pktt-vo-unisex",
+    url: [
+      "https://cdn2.yame.vn/pimg/pktt-vo-unisex-y2010-v02-0015530/e6d23f18-d49c-7e00-89fc-001819a626c4.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/pktt-vo-unisex-y2010-v02-0015530/29014038-e095-7f00-246a-001819a62757.jpg?w=540&h=756",
+    ],
+    price: 19.5,
+  },
+  {
+    to: "shop/pktt-day-nit-on-gian-m18",
+    url: [
+      "https://cdn2.yame.vn/pimg/pktt-day-nit-on-gian-m18-0020428/b8be4b8c-1611-3400-172f-001891ca6e01.jpg?w=540&h=756",
+      "https://cdn2.yame.vn/pimg/pktt-day-nit-on-gian-m18-0020428/0ba42894-b823-3500-983a-001891ca6e09.jpg?w=540&h=756",
+    ],
+    price: 285,
+  },
+];
+
 export const products = homeHotProductsImages.concat(
   homeTrousersImages,
-  saleOffImages
+  saleOffImages,
+  items
 );
 
 const getProductsFromTypes = (arr, query) => {
@@ -320,4 +406,53 @@ getProductsFromTypes(spaceProducts, "ngan-ha");
 const basicProducts = []; // nguyen ban
 getProductsFromTypes(basicProducts, "nguyen-ban");
 
-export { simpleProducts, simplifyProducts, spaceProducts, basicProducts };
+const heroProducts = [];
+getProductsFromTypes(heroProducts, "12vahdt");
+
+const ancientGodProducts = [];
+getProductsFromTypes(ancientGodProducts, "than-co-ai");
+
+const mascotProducts = [];
+getProductsFromTypes(mascotProducts, "linh-vat");
+
+const sportProducts = [];
+getProductsFromTypes(sportProducts, "the-thao");
+
+const shirtProducts = [];
+getProductsFromTypes(shirtProducts, "ao-thun");
+
+const largeFormProducts = [];
+getProductsFromTypes(largeFormProducts, "form-rong");
+
+const longTrousersProducts = [];
+getProductsFromTypes(longTrousersProducts, "quan-dai");
+
+const joggerProducts = [];
+getProductsFromTypes(joggerProducts, "jogger");
+
+const hatProducts = [];
+getProductsFromTypes(hatProducts, "non");
+
+const sockProducts = [];
+getProductsFromTypes(sockProducts, "pktt-vo");
+
+const beltProducts = [];
+getProductsFromTypes(beltProducts, "pktt-day-nit");
+
+export {
+  simpleProducts,
+  simplifyProducts,
+  spaceProducts,
+  basicProducts,
+  heroProducts,
+  ancientGodProducts,
+  mascotProducts,
+  sportProducts,
+  shirtProducts,
+  largeFormProducts,
+  longTrousersProducts,
+  joggerProducts,
+  hatProducts,
+  sockProducts,
+  beltProducts,
+};

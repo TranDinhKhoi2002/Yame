@@ -8,6 +8,7 @@ import Products from "../../components/Products/Products";
 import Social from "./Social";
 
 import Image from "../../components/UI/Image";
+import images from "../../assets/images";
 import {
   homeHotProductsImages,
   homeTrousersImages,
@@ -24,11 +25,11 @@ function Home() {
       </Helmet>
       <div className="animate-image flex justify-center pt-[70px] lg:pt-[79px]">
         <Image
-          to={config.routes.flashSale}
+          to={config.routes.home}
           alt="Discount"
           width="300"
           height="300"
-          src="https://cmsv2.yame.vn/uploads/530df4ed-897b-4c7f-b6db-9f9154a1fbca/banner-1-chu.jpg?quality=80&w=0&h=0"
+          src={images.banner}
         />
       </div>
       <MainCarousel />
